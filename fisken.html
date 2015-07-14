@@ -1,0 +1,235 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+        <script>
+            var Y = YUI();
+            
+            Y.use('node', 'event', function (Y) {
+            });
+        </script>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            console.log("Hello");
+            function expandPost(post_id) {
+                console.log("post_id " + post_id);
+                var post = Y.one('#' + post_id);
+                console.log("post " + post);
+                var section = post.ancestor("section");
+
+                var hidden = post.hasClass('hidden');
+                section.all('span').addClass('hidden');
+                if (hidden) {
+                    console.log('show');
+                    post.removeClass('hidden');
+                }
+            }
+        </script>
+        <style>
+            section.program-post.odd {
+              background-color: #eee;
+            }
+            .program-post {
+              color:green;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+
+        <section class="program-post">
+            <p>08:00 - 09:00 Registrering</p>
+        </section>
+
+
+        <section class="program-post odd">
+            <p>09:00 - 09:10 Selda Ekiz</p>
+            <ul>
+                <li onClick="expandPost('p0900_sal1');">Sal 1: Intro - Selda Ekiz</li>
+            </ul>
+
+            <span id="p0900_sal1" class="hidden">
+                <h5>Selda Ekiz</h5>
+                <h4>Vel valgte ord og dagen er i gang!</h4>
+                <p>Selda Ekiz er kjent fra NRKs Newton og Barn Ingen Adgang og har en mastergrad i Fysikk fra UiB. Med andre ord har hun et diplom på “nerd”. Hun elsker internett og mener at verden hadde vært et mye bedre sted om folk hadde virkelig utnyttet nettet for det den er lagd for: spre kunnskap</p>
+            </span>
+        </section>
+
+
+        <section class="program-post">
+            <p>09:10 - 10:00 Keynote</p>
+            <ul>
+                <li onClick="expandPost('p0910_sal1');">Sal 1: The better parts (EN) - Douglas Crockford</li>
+            </ul>
+
+            <span id="p0910_sal1" class="hidden">
+                <h5>Douglas Crockford</h5>
+                <h4>The better parts (EN)</h4>
+                <p>This talk is about using programming languages more effectively, and using that experience to create and select better programming languages. There are bad practices in software development that are so old and well established that it is difficult to recognize the problems they cause. There will be a review of the new good parts in ES6. JSON will also be mentioned.</p>
+                <p>Doulas Crockford is a senior JavaScript Architect and well known for introducing and maintaining JSON format. He’s a well known presenter and author of several books. He’s a former chief architect at Yahoo and now at PayPal. <a href='http://www.crockford.com/'>Check out his homepage for more information.</a></p>
+            </span>
+        </section>
+
+        <section class="program-post odd">
+            <p>10:00 - 10:15 Pause</p>
+        </section>
+
+        <section class="program-post">
+            <p>10:15 - 10:45</p>
+            <ul>
+                <li onClick="expandPost('p1015_sal1');">Sal 1: Challenges and opportunities in the changing digital landscape - Stefania Montagna</li>
+                <li onClick="expandPost('p1015_sal2');">Sal 2: Introduction to bluetooth low energy – Overview and radio (EN)(1/2) - Carles Cufi</li>
+                <li onClick="expandPost('p1015_sal3');">Sal 3: Among the sleep, En drøm blir virkelig - Adrian Tingstad Husby</li>
+                <li onClick="expandPost('p1015_sal4');">Sal 4: Managing CSS projects with ITCSS (EN) - Harry Roberts</li>
+                <li onClick="expandPost('p1015_sal5');">Sal 5: The lower cog challenge (EN)(1/2) - Niall Merrigan and Glenn F. Henriksen</li>
+            </ul>
+
+
+            <span id="p1015_sal1" class="hidden">
+                <h5>Stefania Montagna</h5>
+                <h4>Challenges and opportunities in the changing digital landscape</h4>
+                <p>The changing digital landscapes challenges developers to think differently. Audience fragmentation, the increasing use of digital technologies beyond the screen and the high level of competition in the digital landscape offers tremendous opportunities and also relevant challenges to anyone trying to make it in this space. The talk will explore how Google is looking to support developers, both technically and from a business perspective, in their strive to develop for the world of tomorrow.</p> 
+                <p>Stefania Montagna is a Strategic Partner Manager in Google’s Online Partnership Group, focusing on the Nordics. Stefaniaspecializes in sales of revenue-generating solutions for publishers and app developers. She has previously contributed to maintaining the Google Blog “Inside AdWords” for Norway, and has organized several Google events in Norway and Sweden.</p>
+            </span>
+
+            <span id="p1015_sal2" class="hidden">
+                <h5>Carles Cufi</h5>
+                <h4>Introduction to bluetooth low energy – Overview and radio (EN)</h4>
+                <p>The presentation will focus on the basics of Bluetooth Low Energy, including a brief overview of the radio, a concise description of all layers in the protocol stack and their inner workings as well as current applications and development platforms offered by my Norwegian employer and IC design company Nordic Semiconductor.</p>
+                <p>Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series.</p>
+            </span>
+
+            <span id="p1015_sal3" class="hidden">
+                <h5>Adrian Tingstad Husby</h5>
+                <h4>Among the sleep, En drøm blir virkelig</h4>
+                <p>Våren 2011 leverte en gjeng studenter bacheloroppgaven sin ‘Among the Sleep’. Den lille prototypen av et dataspill hadde allerede da motatt støtte for vidreutvikling, men ingen av studentene ante egentlig hva de begikk seg ut på. Etter tre år ble spillet til sist ble gitt ut 29. mai i år. Blant annet The Guardian og New York Times har siden delt sin entusiasme rundt spillet. Hvordan tok det form?</p>
+                <p>Adrian er ‘potet’ og alt-mulig-mann i Krillbite Studio. Under utviklingen av Among the Sleep har han jobbet med alt fra markedsføring og spilldesign, til lyddesign og administrativt arbeid.</p>
+            </span>
+
+            <span id="p1015_sal4" class="hidden">
+                <h5>Harry Roberts</h5>
+                <h4>Managing CSS projects with ITCSS (EN)</h4>
+                <p>Harry is a Consultant Front-end Architect, designer, developer, writer and speaker from the UK. Previously a Senior Developer at BSkyB, he now helps tech teams all over the world build better products. He specialises in authoring and scaling large front-ends; he writes on the subjects of maintainability, architecture, performance, OOCSS and more at csswizardry.com; he is the lead and sole developer of inuitcss, a powerful, scalable, Sass-based, BEM, OOCSS framework; he Tweets at @csswizardry.</p>
+            </span>
+
+            <span id="p1015_sal5" class="hidden">
+                <h5>Niall Merrigan and Glenn F. Henriksen</h5>
+                <h4>The lower cog challenge (EN)(1/2)</h4>
+                <p>This isn’t a cage match, this is a TopGear style challenge between the old dog and the not so old dog. In this session, Niall will defend WebForms while Glenn shouts about MVC and they will show how the two fare in a set of grueling technical challenges… Expect the two presenters to trade insults while trying to show the technical superiority of their chosen stack.</p>
+                <p>Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at certsandprogs.com<p>
+                <p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
+            </span>
+        </section>
+
+        <section class="program-post odd">
+            <p>10:45 - 11:00 Pause</p>
+        </section>
+
+        <section class="program-post">
+            <p>11:00 - 11:30</p>
+            <ul>
+                <li onClick="expandPost('p1100_sal1');">Sal 1: {{ angularjs.title }} - Christian Skar</li>
+                <li onClick="expandPost('p1100_sal2');">Sal 2: Introduction to Bluetooth low energy – Protocol stack and applications (EN)(2/2) - Carles Cufi</li>
+                <li onClick="expandPost('p1100_sal3');">Sal 3: How HTML5 missed its graduation day (EN) - Christian Heilman</li>
+                <li onClick="expandPost('p1100_sal4');">Sal 4: Dysfunksjonelle utviklingsteam - Sondre Bjellås</li>
+                <li onClick="expandPost('p1100_sal5');">Sal 5: The lower cog challenge (EN)(2/2) - Niall Merrigan and Glenn F. Henriksen</li>
+            </ul>
+
+
+            <span id="p1100_sal1" class="hidden">
+                <h5>Christian Skar</h5>
+                <h4>{{ angularjs.title }}</h4>
+                <p>Du har kanskje hørt om AngularJS? Du tenkte kanskje også “Herregud, ikke enda et JavaScript-rammeverk”. Da er denne talken noe for deg. I løpet av 30 minutter skal vi demonstrere de egenskapene og funksjonene som gjør rammeverket så populært.</p>
+                <p>Lokal fersk systemutvikler som har oppholdt seg for det meste i .NET verden de siste to årene. Er over gjennomsnittet interessert i design, prototyping og front-end utvikling. Liker å utforske ny teknologi og fortelle kolleger om dem.</p>
+            </span>
+
+            <span id="p1100_sal2" class="hidden">
+                <h5>Carles Cufi</h5>
+                <h4>Introduction to Bluetooth low energy – Protocol stack and applications (EN)(2/2)</h4>
+                <p>The presentation will focus on the basics of Bluetooth Low Energy, including a brief overview of the radio, a concise description of all layers in the protocol stack and their inner workings as well as current applications and development platforms offered by my Norwegian employer and IC design company Nordic Semiconductor.</p>
+                <p>Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series.</p>
+            </span>
+
+            <span id="p1100_sal3" class="hidden">
+                <h5>Christian Heilman</h5>
+                <h4>How HTML5 missed its graduation day (EN)</h4>
+                <p>Chris Heilmann has dedicated a lot of his time making the web better. Originally coming from a radio journalism background, he built his first web site from scratch around 1997 and spent the following years working on lots of large, international web sites. He then spent a few years in Yahoo building products and explaining and training people and is now at Mozilla. Chris wrote and contributed to six books on web development and wrote many articles and hundreds of blog posts.</p>
+            </span>
+
+            <span id="p1100_sal4" class="hidden">
+                <h5>Sondre Bjellås</h5>
+                <h4>Dysfunksjonelle utviklingsteam</h4>
+                <p>Hva er det som skjer når man plasserer forskjellige individer i en gruppen sammen for å utvikle IT-løsninger? Har vi glemt at et team består av individer, når vi forsøker å bruke metodikk og verktøy for å få et dysfunksjonelt team til å prestere bedre? Hvordan kan man skape et bedre og mer positivt utviklingsmiljø?</p>
+                <p>Med over 16 års erfaring med systemutvikling, har jeg begynt å få en forståelse for hva som fungerer bra og dårlig med utviklingsteam. Erfaring fra mange store og små prosjekter i Norge og utlandet, jobber som konsulent i Kristiansand for Deepmind.</p>
+            </span>
+
+            <span id="p1100_sal5" class="hidden">
+                <h5>Niall Merrigan and Glenn F. Henriksen</h5>
+                <h4>The lower cog challenge (EN)(2/2)</h4>
+                <p>Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at <a href='http://certsandprogs.com'>certsandprogs.com</a></p>
+                <p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
+            </span>
+        </section>
+
+        <section class="program-post odd">
+            <p>11:30 - 11:45 Pause</p>
+        </section>
+
+        <section class="program-post">
+            <p>11:45 - 12:15</p>
+            <ul>
+                <li onClick="expandPost('p1145_sal1');">Sal 1: </li>
+                <li onClick="expandPost('p1145_sal2');">Sal 2: </li>
+                <li onClick="expandPost('p1145_sal3');">Sal 3: </li>
+                <li onClick="expandPost('p1145_sal4');">Sal 4: </li>
+                <li onClick="expandPost('p1145_sal5');">Sal 5: </li>
+            </ul>
+
+
+            <span id="p1145_sal1" class="hidden">
+                <h5></h5>
+                <h4></h4>
+                <p></p>
+                <p></p>
+            </span>
+
+            <span id="p1145_sal2" class="hidden">
+                <h5></h5>
+                <h4></h4>
+                <p></p>
+                <p></p>
+            </span>
+
+            <span id="p1145_sal3" class="hidden">
+                <h5></h5>
+                <h4></h4>
+                <p></p>
+                <p></p>
+            </span>
+
+            <span id="p1145_sal4" class="hidden">
+                <h5></h5>
+                <h4></h4>
+                <p></p>
+                <p></p>
+            </span>
+
+            <span id="p1145_sal5" class="hidden">
+                <h5></h5>
+                <h4></h4>
+                <p></p>
+                <p></p>
+            </span>
+        </section>
+
+        <section class="program-post odd">
+            <p>12:15 - 13:15 Lunsj</p>
+        </section>
+
+    </body>
+</html>
