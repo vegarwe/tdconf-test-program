@@ -11,69 +11,46 @@
             Y.use('node', 'event', function (Y) {
             });
         </script>
-    </head>
 
-    <body>
-        <script type="text/javascript">
-            console.log("Hello");
-
-            YUI().use('event', function (Y) {
-
-              var favourite = Y.all(".favourite");
-              favourite.on("click", function (e) {
-                  var list_id = e.currentTarget.ancestor().get('id');
-                  var post_id = 'p' + list_id.substring(1);
-                  console.log("favourite: " + post_id);
-              });
-
-              var expand = Y.all(".expand");
-              expand.on("click", function (e) {
-                  var list_id = e.currentTarget.ancestor().get('id');
-                  var show_id = 'p' + list_id.substring(1);
-                  var show    = Y.one('#' + show_id);
-                  var section = show.ancestor("section");
-                  console.log("show: " + show);
-
-                  var hidden = show.hasClass('hidden');
-                  section.all('span.show').addClass('hidden');
-                  if (hidden) {
-                      show.removeClass('hidden');
-                  }
-              });
-            });
-        </script>
         <style>
             section.program-post.odd {
               background-color: #eee;
             }
+
             .hidden {
                 display: none;
             }
 
+            img.show-img {
+                height: 156px;
+                width:  156px;
+            }
+
             th {
               width: 40px;
-              border: 1px solid blue;
             }
 
-            button.favourite {
-              border: none;
-              /*
-              position: relative;
-              left: -50px;
-              */
+            div.fav-icon {
+                float: left;
+            }
+            span.expand {
+                width: 100%;
+                display: table-cell;
+            }
+            span.expand-icon {
+                display: table-cell;
+                margin: 0;
+                padding: 0;
             }
 
-            .favourite {
-              border: 1px solid green;
-            }
-            .expand {
-              border: 1px solid red;
-            }
-            .show {
-              border: 1px solid yellow;
-            }
+
+            .favourite { border: 1px solid green; }
+            .expand    { border: 1px solid red; }
+            .show      { border: 1px solid yellow; }
         </style>
+    </head>
 
+    <body>
         <section class="program-post">
             <p>08:00 - 09:00 Registrering</p>
         </section>
@@ -82,13 +59,13 @@
         <section class="program-post odd">
             <p>09:00 - 09:10 Intro</p>
             <table>
-                <tr id='l0900_sal1'><th class='favourite'>Sal 1 <img src="start_unselected.png"/></th><td class='expand'><img src="arrow-down.png"/>Intro - Selda Ekiz</td></tr>
+                <tr id='l0900_sal1'><th class='favourite'>Sal 1 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Intro - Selda Ekiz</td></tr>
             </table>
 
             <span id="p0900_sal1" class="show hidden">
                 <h5>Selda Ekiz</h5>
                 <h4>Vel valgte ord og dagen er i gang!</h4>
-                <p>Selda Ekiz er kjent fra NRKs Newton og Barn Ingen Adgang og har en mastergrad i Fysikk fra UiB. Med andre ord har hun et diplom på “nerd”. Hun elsker internett og mener at verden hadde vært et mye bedre sted om folk hadde virkelig utnyttet nettet for det den er lagd for: spre kunnskap</p>
+                <p><img class="show-img" src="img/Speaker_picture-Selda-Ekiz-400x400.jpg">Selda Ekiz er kjent fra NRKs Newton og Barn Ingen Adgang og har en mastergrad i Fysikk fra UiB. Med andre ord har hun et diplom på “nerd”. Hun elsker internett og mener at verden hadde vært et mye bedre sted om folk hadde virkelig utnyttet nettet for det den er lagd for: spre kunnskap</p>
             </span>
         </section>
 
@@ -96,13 +73,13 @@
         <section class="program-post">
             <p>09:10 - 10:00 Keynote</p>
             <table>
-                <tr id='l0910_sal1'><th class='favourite'>Sal 1 <img src="start_unselected.png"/></th><td class='expand'><img src="arrow-down.png"/>The better parts (EN) - Douglas Crockford</td></tr>
+                <tr id='l0910_sal1'><th class='favourite'>Sal 1 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>The better parts (EN) - Douglas Crockford</td></tr>
             </table>
 
             <span id="p0910_sal1" class="show hidden">
                 <h5>Douglas Crockford</h5>
                 <h4>The better parts (EN)</h4>
-                <p>This talk is about using programming languages more effectively, and using that experience to create and select better programming languages. There are bad practices in software development that are so old and well established that it is difficult to recognize the problems they cause. There will be a review of the new good parts in ES6. JSON will also be mentioned.</p>
+                <p><img class="show-img" src="img/Speaker_Picture-DouglasCrockford_Feb2013-400x400.jpeg">This talk is about using programming languages more effectively, and using that experience to create and select better programming languages. There are bad practices in software development that are so old and well established that it is difficult to recognize the problems they cause. There will be a review of the new good parts in ES6. JSON will also be mentioned.</p>
                 <p>Doulas Crockford is a senior JavaScript Architect and well known for introducing and maintaining JSON format. He’s a well known presenter and author of several books. He’s a former chief architect at Yahoo and now at PayPal. <a href='http://www.crockford.com/'>Check out his homepage for more information.</a></p>
             </span>
         </section>
@@ -114,11 +91,11 @@
         <section class="program-post">
             <p>10:15 - 10:45</p>
             <table class"programTable">
-                <tr id='l1015_sal1'><th class='favourite'>Sal 1 <img src="start_unselected.png"/></th><td class='expand'><img src="arrow-down.png"/>Challenges and opportunities in the changing digital landscape - Stefania Montagna</td></tr>
-                <tr id='l1015_sal2'><th class='favourite'>Sal 2 <img src="start_unselected.png"/></th><td class='expand'><img src="arrow-down.png"/>Introduction to bluetooth low energy – Overview and radio (EN)(1/2) - Carles Cufi</td></tr>
-                <tr id='l1015_sal3'><th class='favourite'>Sal 3 <img src="start_unselected.png"/></th><td class='expand'><img src="arrow-down.png"/>Among the sleep, En drøm blir virkelig - Adrian Tingstad Husby</td></tr>
-                <tr id='l1015_sal4'><th class='favourite'>Sal 4 <img src="start_unselected.png"/></th><td class='expand'><img src="arrow-down.png"/>Managing CSS projects with ITCSS (EN) - Harry Roberts</td></tr>
-                <tr id='l1015_sal5'><th class='favourite'>Sal 5 <img src="start_unselected.png"/></th><td class='expand'><img src="arrow-down.png"/>The lower cog challenge (EN)(1/2) - Niall Merrigan and Glenn F. Henriksen</td></tr>
+                <tr id='l1015_sal1'><th class='favourite'>Sal 1 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Challenges and opportunities in the changing digital landscape - Stefania Montagna</td></tr>
+                <tr id='l1015_sal2'><th class='favourite'>Sal 2 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Introduction to bluetooth low energy – Overview and radio (EN)(1/2) - Carles Cufi</td></tr>
+                <tr id='l1015_sal3'><th class='favourite'>Sal 3 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Among the sleep, En drøm blir virkelig - Adrian Tingstad Husby</td></tr>
+                <tr id='l1015_sal4'><th class='favourite'>Sal 4 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Managing CSS projects with ITCSS (EN) - Harry Roberts</td></tr>
+                <tr id='l1015_sal5'><th class='favourite'>Sal 5 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>The lower cog challenge (EN)(1/2) - Niall Merrigan and Glenn F. Henriksen</td></tr>
             </table>
 
 
@@ -146,14 +123,14 @@
             <span id="p1015_sal4" class="show hidden">
                 <h5>Harry Roberts</h5>
                 <h4>Managing CSS projects with ITCSS (EN)</h4>
-                <p>Harry is a Consultant Front-end Architect, designer, developer, writer and speaker from the UK. Previously a Senior Developer at BSkyB, he now helps tech teams all over the world build better products. He specialises in authoring and scaling large front-ends; he writes on the subjects of maintainability, architecture, performance, OOCSS and more at csswizardry.com; he is the lead and sole developer of inuitcss, a powerful, scalable, Sass-based, BEM, OOCSS framework; he Tweets at @csswizardry.</p>
+                <p><img class="show-img" src="img/harry-400x400.jpg">Harry is a Consultant Front-end Architect, designer, developer, writer and speaker from the UK. Previously a Senior Developer at BSkyB, he now helps tech teams all over the world build better products. He specialises in authoring and scaling large front-ends; he writes on the subjects of maintainability, architecture, performance, OOCSS and more at csswizardry.com; he is the lead and sole developer of inuitcss, a powerful, scalable, Sass-based, BEM, OOCSS framework; he Tweets at @csswizardry.</p>
             </span>
 
             <span id="p1015_sal5" class="show hidden">
                 <h5>Niall Merrigan and Glenn F. Henriksen</h5>
                 <h4>The lower cog challenge (EN)(1/2)</h4>
                 <p>This isn’t a cage match, this is a TopGear style challenge between the old dog and the not so old dog. In this session, Niall will defend WebForms while Glenn shouts about MVC and they will show how the two fare in a set of grueling technical challenges… Expect the two presenters to trade insults while trying to show the technical superiority of their chosen stack.</p>
-                <p>Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at certsandprogs.com<p>
+                <p><img class="show-img" src="img/Niall_Glenn-400x400.jpg">Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at certsandprogs.com<p>
                 <p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
             </span>
         </section>
@@ -164,11 +141,11 @@
 
         <section class="program-post">
             <p>11:00 - 11:30</p>
-            <p id="l1100_sal1" class="program-li"><button class="favourite">Sal 1</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>{{ angularjs.title }} - Christian Skar</span></p>
-            <p id="l1100_sal2" class="program-li"><button class="favourite">Sal 2</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>Introduction to Bluetooth low energy – Protocol stack and applications (EN)(2/2) - Carles Cufi</span></p>
-            <p id="l1100_sal3" class="program-li"><button class="favourite">Sal 3</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>How HTML5 missed its graduation day (EN) - Christian Heilman</span></p>
-            <p id="l1100_sal4" class="program-li"><button class="favourite">Sal 4</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>Dysfunksjonelle utviklingsteam - Sondre Bjellås</span></p>
-            <p id="l1100_sal5" class="program-li"><button class="favourite">Sal 5</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>The lower cog challenge (EN)(2/2) - Niall Merrigan and Glenn F. Henriksen</span></p>
+            <h5 id="l1100_sal1" class="program-li"><div  class="fav-icon favourite" />Sal 1</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">{{ angularjs.title }} - Christian Skar</span>                                                           <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
+            <h5 id="l1100_sal2" class="program-li"><div  class="fav-icon favourite" />Sal 2</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">Introduction to Bluetooth low energy – Protocol stack and applications (EN)(2/2) - Carles Cufi</span>   <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
+            <h5 id="l1100_sal3" class="program-li"><div  class="fav-icon favourite" />Sal 3</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">How HTML5 missed its graduation day (EN) - Christian Heilman</span>                                     <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
+            <h5 id="l1100_sal4" class="program-li"><div  class="fav-icon favourite" />Sal 4</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">Dysfunksjonelle utviklingsteam - Sondre Bjellås</span>                                                  <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
+            <h5 id="l1100_sal5" class="program-li"><div  class="fav-icon favourite" />Sal 5</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">The lower cog challenge (EN)(2/2) - Niall Merrigan and Glenn F. Henriksen</span>                        <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
 
             <span id="p1100_sal1" class="show hidden">
                 <h5>Christian Skar</h5>
@@ -212,11 +189,11 @@
         <section class="program-post">
             <p>11:45 - 12:15</p>
             <ul>
-                <li id="l1245_sal1" class="program-li"><button class="favourite">Sal 1</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>Creating adaptive experiences (EN) - Avi Itzkovitch</span></li>
-                <li id="l1245_sal2" class="program-li"><button class="favourite">Sal 2</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>The magic of regular expressions - Rustam Mehmandarov</span></li>
-                <li id="l1245_sal3" class="program-li"><button class="favourite">Sal 3</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>Papirflytting eller integrasjon? La systemene snakke sammen! - Anita Skylstad</span></li>
-                <li id="l1245_sal4" class="program-li"><button class="favourite">Sal 4</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>Bluetooth low energy on Android  - Vegar Westerlund</span></li>
-                <li id="l1245_sal5" class="program-li"><button class="favourite">Sal 5</br><img src="start_unselected.png"/></button><span class="expand"><img src="arrow-down.png"/>Hvordan jobbe bedre som team i smidig utvikling? - Torgeir Dingsøyr</span></li>
+                <li id="l1245_sal1" class="program-li"><button class="favourite">Sal 1</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Creating adaptive experiences (EN) - Avi Itzkovitch</span></li>
+                <li id="l1245_sal2" class="program-li"><button class="favourite">Sal 2</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>The magic of regular expressions - Rustam Mehmandarov</span></li>
+                <li id="l1245_sal3" class="program-li"><button class="favourite">Sal 3</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Papirflytting eller integrasjon? La systemene snakke sammen! - Anita Skylstad</span></li>
+                <li id="l1245_sal4" class="program-li"><button class="favourite">Sal 4</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Bluetooth low energy on Android  - Vegar Westerlund</span></li>
+                <li id="l1245_sal5" class="program-li"><button class="favourite">Sal 5</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Hvordan jobbe bedre som team i smidig utvikling? - Torgeir Dingsøyr</span></li>
             </ul>
 
             <span id="p1245_sal1" class="show hidden">
@@ -260,5 +237,54 @@
             <p>12:15 - 13:15 Lunsj</p>
         </section>
 
+        <script type="text/javascript">
+            YUI().use('event', function (Y) {
+                var favourites = {'l1015_sal1': true, 'l1100_sal2': true, 'l1100_sal4': false};
+                console.log("Hello " + favourites);
+
+                Y.all("img.fav-icon").each(function (img, idx, list) {
+                    var list_id = img.ancestor().ancestor().get('id');
+
+                    if (list_id in favourites && favourites[list_id]) {
+                        img.set('src', 'start_selected.png');
+                    }
+                });
+
+                var favourite = Y.all(".favourite");
+                favourite.on("click", function (e) {
+                    var list_id = e.currentTarget.ancestor().get('id');
+
+                    var img = e.currentTarget.get('children');
+                    if (list_id in favourites && favourites[list_id]) {
+                        favourites[list_id] = false;
+                        img.set('src', 'start_unselected.png');
+                    } else {
+                        favourites[list_id] = true;
+                        img.set('src', 'start_selected.png');
+                    }
+                });
+
+                var expand = Y.all(".expand");
+                expand.on("click", function (e) {
+                    var container   = e.currentTarget.ancestor().ancestor();
+                    var list_id     = e.currentTarget.ancestor().get('id');
+                    var show_id     = 'p' + list_id.substring(1);
+                    var show        = Y.one('#' + show_id);
+                    var section     = show.ancestor("section");
+                    console.log("show: " + show);
+
+                    var img = e.currentTarget.get('children');
+                    console.log("img " + img);
+
+                    var hidden = show.hasClass('hidden');
+                    section.all('span.show').addClass('hidden');
+                    container.all('img.expand-icon').set('src', 'arrow-down.png')
+                    if (hidden) {
+                        img.set('src', 'arrow-up.png');
+                        show.removeClass('hidden');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
