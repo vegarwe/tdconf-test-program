@@ -5,12 +5,6 @@
         <meta charset="utf-8">
 
         <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
-        <script>
-            var Y = YUI();
-
-            Y.use('node', 'event', function (Y) {
-            });
-        </script>
 
         <style>
             section.program-post.odd {
@@ -30,7 +24,7 @@
               width: 40px;
             }
 
-            div.fav-icon {
+            div.favourite {
                 float: left;
             }
             span.expand {
@@ -58,10 +52,8 @@
 
         <section class="program-post odd">
             <p>09:00 - 09:10 Intro</p>
-            <table>
-                <tr id='l0900_sal1'><th class='favourite'>Sal 1 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Intro - Selda Ekiz</td></tr>
-            </table>
 
+            <h5 id="l0900_sal1"><div class="favourite">Sal 1</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">Intro - Selda Ekiz</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p0900_sal1" class="show hidden">
                 <h5>Selda Ekiz</h5>
                 <h4>Vel valgte ord og dagen er i gang!</h4>
@@ -72,10 +64,8 @@
 
         <section class="program-post">
             <p>09:10 - 10:00 Keynote</p>
-            <table>
-                <tr id='l0910_sal1'><th class='favourite'>Sal 1 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>The better parts (EN) - Douglas Crockford</td></tr>
-            </table>
 
+            <h5 id="l0910_sal1"><div class="favourite">Sal 1</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">The better parts (EN) - Douglas Crockford Ekiz</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p0910_sal1" class="show hidden">
                 <h5>Douglas Crockford</h5>
                 <h4>The better parts (EN)</h4>
@@ -90,15 +80,8 @@
 
         <section class="program-post">
             <p>10:15 - 10:45</p>
-            <table class"programTable">
-                <tr id='l1015_sal1'><th class='favourite'>Sal 1 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Challenges and opportunities in the changing digital landscape - Stefania Montagna</td></tr>
-                <tr id='l1015_sal2'><th class='favourite'>Sal 2 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Introduction to bluetooth low energy – Overview and radio (EN)(1/2) - Carles Cufi</td></tr>
-                <tr id='l1015_sal3'><th class='favourite'>Sal 3 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Among the sleep, En drøm blir virkelig - Adrian Tingstad Husby</td></tr>
-                <tr id='l1015_sal4'><th class='favourite'>Sal 4 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>Managing CSS projects with ITCSS (EN) - Harry Roberts</td></tr>
-                <tr id='l1015_sal5'><th class='favourite'>Sal 5 <img class="fav-icon" src="start_unselected.png"/></th><td class='expand'><img class="expand-icon" src="arrow-down.png"/>The lower cog challenge (EN)(1/2) - Niall Merrigan and Glenn F. Henriksen</td></tr>
-            </table>
 
-
+            <h5 id='l1015_sal1'><div class='favourite'>Sal 1</br><img class="fav-icon" src="star_unsel.png"/></div><span class='expand'>Challenges and opportunities in the changing digital landscape - Stefania Montagna</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1015_sal1" class="show hidden">
                 <h5>Stefania Montagna</h5>
                 <h4>Challenges and opportunities in the changing digital landscape</h4>
@@ -106,6 +89,7 @@
                 <p>Stefania Montagna is a Strategic Partner Manager in Google’s Online Partnership Group, focusing on the Nordics. Stefaniaspecializes in sales of revenue-generating solutions for publishers and app developers. She has previously contributed to maintaining the Google Blog “Inside AdWords” for Norway, and has organized several Google events in Norway and Sweden.</p>
             </span>
 
+            <h5 id='l1015_sal2'><div class='favourite'>Sal 2</br><img class="fav-icon" src="star_unsel.png"/></div><span class='expand'>Introduction to bluetooth low energy – Overview and radio (EN)(1/2) - Carles Cufi</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1015_sal2" class="show hidden">
                 <h5>Carles Cufi</h5>
                 <h4>Introduction to bluetooth low energy – Overview and radio (EN)</h4>
@@ -113,6 +97,7 @@
                 <p>Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series.</p>
             </span>
 
+            <h5 id='l1015_sal3'><div class='favourite'>Sal 3</br><img class="fav-icon" src="star_unsel.png"/></div><span class='expand'>Among the sleep, En drøm blir virkelig - Adrian Tingstad Husby</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1015_sal3" class="show hidden">
                 <h5>Adrian Tingstad Husby</h5>
                 <h4>Among the sleep, En drøm blir virkelig</h4>
@@ -120,12 +105,14 @@
                 <p>Adrian er ‘potet’ og alt-mulig-mann i Krillbite Studio. Under utviklingen av Among the Sleep har han jobbet med alt fra markedsføring og spilldesign, til lyddesign og administrativt arbeid.</p>
             </span>
 
+            <h5 id='l1015_sal4'><div class='favourite'>Sal 4</br><img class="fav-icon" src="star_unsel.png"/></div><span class='expand'>Managing CSS projects with ITCSS (EN) - Harry Roberts</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1015_sal4" class="show hidden">
                 <h5>Harry Roberts</h5>
                 <h4>Managing CSS projects with ITCSS (EN)</h4>
                 <p><img class="show-img" src="img/harry-400x400.jpg">Harry is a Consultant Front-end Architect, designer, developer, writer and speaker from the UK. Previously a Senior Developer at BSkyB, he now helps tech teams all over the world build better products. He specialises in authoring and scaling large front-ends; he writes on the subjects of maintainability, architecture, performance, OOCSS and more at csswizardry.com; he is the lead and sole developer of inuitcss, a powerful, scalable, Sass-based, BEM, OOCSS framework; he Tweets at @csswizardry.</p>
             </span>
 
+            <h5 id='l1015_sal5'><div class='favourite'>Sal 5</br><img class="fav-icon" src="star_unsel.png"/></div><span class='expand'>The lower cog challenge (EN)(1/2) - Niall Merrigan and Glenn F. Henriksen</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1015_sal5" class="show hidden">
                 <h5>Niall Merrigan and Glenn F. Henriksen</h5>
                 <h4>The lower cog challenge (EN)(1/2)</h4>
@@ -141,12 +128,8 @@
 
         <section class="program-post">
             <p>11:00 - 11:30</p>
-            <h5 id="l1100_sal1" class="program-li"><div  class="fav-icon favourite" />Sal 1</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">{{ angularjs.title }} - Christian Skar</span>                                                           <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
-            <h5 id="l1100_sal2" class="program-li"><div  class="fav-icon favourite" />Sal 2</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">Introduction to Bluetooth low energy – Protocol stack and applications (EN)(2/2) - Carles Cufi</span>   <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
-            <h5 id="l1100_sal3" class="program-li"><div  class="fav-icon favourite" />Sal 3</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">How HTML5 missed its graduation day (EN) - Christian Heilman</span>                                     <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
-            <h5 id="l1100_sal4" class="program-li"><div  class="fav-icon favourite" />Sal 4</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">Dysfunksjonelle utviklingsteam - Sondre Bjellås</span>                                                  <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
-            <h5 id="l1100_sal5" class="program-li"><div  class="fav-icon favourite" />Sal 5</br><img  class="fav-icon" src="start_unselected.png"/></div><span class="expand">The lower cog challenge (EN)(2/2) - Niall Merrigan and Glenn F. Henriksen</span>                        <span class="expand-icon expand"><img class="expand-icon" src="arrow-down.png"/></span></h5>
 
+            <h5 id="l1100_sal1"><div class="favourite">Sal 1</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">{{ angularjs.title }} - Christian Skar</span>                                                           <span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1100_sal1" class="show hidden">
                 <h5>Christian Skar</h5>
                 <h4>{{ angularjs.title }}</h4>
@@ -154,6 +137,7 @@
                 <p>Lokal fersk systemutvikler som har oppholdt seg for det meste i .NET verden de siste to årene. Er over gjennomsnittet interessert i design, prototyping og front-end utvikling. Liker å utforske ny teknologi og fortelle kolleger om dem.</p>
             </span>
 
+            <h5 id="l1100_sal2"><div class="favourite">Sal 2</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">Introduction to Bluetooth low energy – Protocol stack and applications (EN)(2/2) - Carles Cufi</span>   <span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1100_sal2" class="show hidden">
                 <h5>Carles Cufi</h5>
                 <h4>Introduction to Bluetooth low energy – Protocol stack and applications (EN)(2/2)</h4>
@@ -161,12 +145,14 @@
                 <p>Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series.</p>
             </span>
 
+            <h5 id="l1100_sal3"><div class="favourite">Sal 3</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">How HTML5 missed its graduation day (EN) - Christian Heilman</span>                                     <span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1100_sal3" class="show hidden">
                 <h5>Christian Heilman</h5>
                 <h4>How HTML5 missed its graduation day (EN)</h4>
                 <p>Chris Heilmann has dedicated a lot of his time making the web better. Originally coming from a radio journalism background, he built his first web site from scratch around 1997 and spent the following years working on lots of large, international web sites. He then spent a few years in Yahoo building products and explaining and training people and is now at Mozilla. Chris wrote and contributed to six books on web development and wrote many articles and hundreds of blog posts.</p>
             </span>
 
+            <h5 id="l1100_sal4"><div class="favourite">Sal 4</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">Dysfunksjonelle utviklingsteam - Sondre Bjellås</span>                                                  <span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1100_sal4" class="show hidden">
                 <h5>Sondre Bjellås</h5>
                 <h4>Dysfunksjonelle utviklingsteam</h4>
@@ -174,6 +160,7 @@
                 <p>Med over 16 års erfaring med systemutvikling, har jeg begynt å få en forståelse for hva som fungerer bra og dårlig med utviklingsteam. Erfaring fra mange store og små prosjekter i Norge og utlandet, jobber som konsulent i Kristiansand for Deepmind.</p>
             </span>
 
+            <h5 id="l1100_sal5"><div class="favourite">Sal 5</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">The lower cog challenge (EN)(2/2) - Niall Merrigan and Glenn F. Henriksen</span>                        <span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1100_sal5" class="show hidden">
                 <h5>Niall Merrigan and Glenn F. Henriksen</h5>
                 <h4>The lower cog challenge (EN)(2/2)</h4>
@@ -188,14 +175,8 @@
 
         <section class="program-post">
             <p>11:45 - 12:15</p>
-            <ul>
-                <li id="l1245_sal1" class="program-li"><button class="favourite">Sal 1</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Creating adaptive experiences (EN) - Avi Itzkovitch</span></li>
-                <li id="l1245_sal2" class="program-li"><button class="favourite">Sal 2</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>The magic of regular expressions - Rustam Mehmandarov</span></li>
-                <li id="l1245_sal3" class="program-li"><button class="favourite">Sal 3</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Papirflytting eller integrasjon? La systemene snakke sammen! - Anita Skylstad</span></li>
-                <li id="l1245_sal4" class="program-li"><button class="favourite">Sal 4</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Bluetooth low energy on Android  - Vegar Westerlund</span></li>
-                <li id="l1245_sal5" class="program-li"><button class="favourite">Sal 5</br><img class="fav-icon" src="start_unselected.png"/></button><span class="expand"><img class="expand-icon" src="arrow-down.png"/>Hvordan jobbe bedre som team i smidig utvikling? - Torgeir Dingsøyr</span></li>
-            </ul>
 
+            <h5 id="l1245_sal1"><div class="favourite">Sal 1</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">Creating adaptive experiences (EN) - Avi Itzkovitch</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1245_sal1" class="show hidden">
                 <h5>Avi Itzkovitch</h5>
                 <h4>Creating adaptive experiences (EN)</h4>
@@ -203,6 +184,7 @@
                 <p>Avi (@xgmedia) is a longtime interactive and web design professional with thirteen years of experience. He is an avid enthusiast of technology and is often invited to speak about emerging design and UX trends. Avi is currently working as an Independent UI/UX Consultant at his studio, XG Media and is the Founder of UX Salon (@uxsalon), an international UX Design conference in Tel-Aviv.</p>
             </span>
 
+            <h5 id="l1245_sal2"><div class="favourite">Sal 2</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">The magic of regular expressions - Rustam Mehmandarov</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1245_sal2" class="show hidden">
                 <h5>Rustam Mehmandarov</h5>
                 <h4>The magic of regular expressions</h4>
@@ -211,6 +193,7 @@
                 <p>Rustam Mehmandarov har en mastergrad fra Institutt for Informatikk, UiO. Han har over 8 års erfaring som utvikler, teknisk prosjektleder og leveranseansvarlig i både store og små prosjekter. Han har interesse for smidig utvikling, webutvikling, arkitektur og geografiske informasjonssystemer. Han er også en guru på både Linux og Windows. På fritiden er han veldig glad i å trene, når han ikke sitter og koder i Python eller Java. Han snakker også ofte på forskjellige konferanser som JavaZone, NDC, Boosterconf og diverse faglige events på universiteter over hele Norge.</p>
             </span>
 
+            <h5 id="l1245_sal3"><div class="favourite">Sal 3</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">Papirflytting eller integrasjon? La systemene snakke sammen! - Anita Skylstad</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1245_sal3" class="show hidden">
                 <h5>Anita Skylstad</h5>
                 <h4>Papirflytting eller integrasjon? La systemene snakke sammen!</h4>
@@ -218,6 +201,7 @@
                 <p>Anita jakter på de løsningene som gir mest tilbake til brukerne. Brukerne skal aldri føle seg motarbeidet når de bruker sine arbeidsverktøy. Hvis behovene ikke er støttet så er heller ikke systemet ferdig. Forenkling og digitalisering er hennes daglige visjon. Som programmerer og systemutvikler har Anita beveget seg fra Java til .NET og inn i en verden med C#, WCF og BizTalk.</p>
             </span>
 
+            <h5 id="l1245_sal4"><div class="favourite">Sal 4</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">Bluetooth low energy on Android  - Vegar Westerlund</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1245_sal4" class="show hidden">
                 <h5>Vegar Westerlund</h5>
                 <h4>Bluetooth low energy on Android</h4>
@@ -225,6 +209,7 @@
                 <p>Vegar Westerlund is an embedded tester and developer working for Conceptos Consulting in Trondheim. He has developed on embedded Linux, done testing for ESA on Galileo (satellite navigation system) and is currently working for Nordic Semiconductor with Bluetooth low energy on their ARM based nRF51 series. He is also active in the Meetup community here in Trondheim and an organiser for XP meetup.</p>
             </span>
 
+            <h5 id="l1245_sal5"><div class="favourite">Sal 5</br><img class="fav-icon" src="star_unsel.png"/></div><span class="expand">Hvordan jobbe bedre som team i smidig utvikling? - Torgeir Dingsøyr</span><span class="expand-icon expand"><img src="arrow-down.png"/></span></h5>
             <span id="p1245_sal5" class="show hidden">
                 <h5>Torgeir Dingsøyr</h5>
                 <h4>Hvordan jobbe bedre som team i smidig utvikling?</h4>
@@ -239,17 +224,19 @@
 
         <script type="text/javascript">
             YUI().use('event', function (Y) {
+                // Simulate cookie with selected elements
                 var favourites = {'l1015_sal1': true, 'l1100_sal2': true, 'l1100_sal4': false};
-                console.log("Hello " + favourites);
 
+                // Select all elements found in stored cookie (TODO)
                 Y.all("img.fav-icon").each(function (img, idx, list) {
                     var list_id = img.ancestor().ancestor().get('id');
 
                     if (list_id in favourites && favourites[list_id]) {
-                        img.set('src', 'start_selected.png');
+                        img.set('src', 'star_sel.png');
                     }
                 });
 
+                // Handle favourite icon clicked
                 var favourite = Y.all(".favourite");
                 favourite.on("click", function (e) {
                     var list_id = e.currentTarget.ancestor().get('id');
@@ -257,13 +244,14 @@
                     var img = e.currentTarget.get('children');
                     if (list_id in favourites && favourites[list_id]) {
                         favourites[list_id] = false;
-                        img.set('src', 'start_unselected.png');
+                        img.set('src', 'star_unsel.png');
                     } else {
                         favourites[list_id] = true;
-                        img.set('src', 'start_selected.png');
+                        img.set('src', 'star_sel.png');
                     }
                 });
 
+                // Handle expand clicked
                 var expand = Y.all(".expand");
                 expand.on("click", function (e) {
                     var container   = e.currentTarget.ancestor().ancestor();
@@ -277,11 +265,12 @@
                     console.log("img " + img);
 
                     var hidden = show.hasClass('hidden');
-                    section.all('span.show').addClass('hidden');
-                    container.all('img.expand-icon').set('src', 'arrow-down.png')
                     if (hidden) {
-                        img.set('src', 'arrow-up.png');
                         show.removeClass('hidden');
+                        img.set('src', 'arrow-up.png');
+                    } else {
+                        show.addClass('hidden');
+                        img.set('src', 'arrow-down.png');
                     }
                 });
             });
