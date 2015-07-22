@@ -7,10 +7,6 @@
 
         <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
 
-    </head>
-
-    <body>
-
         <style>
             /* Debugging
             */
@@ -18,7 +14,7 @@
 
             html {
                 background-color: #01131C;
-                color: grey;
+                color: #eee;
             }
 
             .favourite { border: 1px solid green; }
@@ -26,14 +22,21 @@
             .show      { border: 1px solid yellow; }
         </style>
 
+    </head>
+
+    <body>
         <style>
-            section.program-post.odd {
+            section.program-post.sep {
+                background-color: #333;
             }
             div.favourite {
                 float: left;
+                clear: both;
+                padding-left: 5px;
+                padding-right: 5px;
             }
             span.post-title {
-                width: 95%;
+                width: 97%;
                 display: table-cell;
             }
             span.expand-icon {
@@ -42,7 +45,7 @@
                 padding: 0;
             }
             div.show {
-                margin-left: 40px;
+                margin-left: 20px;
             }
             img.show-img {
                 height: 156px;
@@ -60,21 +63,29 @@
 
         <h2>Program 2015</h2>
 
-        <section class="program-post">
+        <section class="program-post sep">
             <h4>08:00 - 09:00 Registrering</h4>
-            <hr/>
         </section>
 
 
-        <section class="program-post odd">
+        <section class="program-post">
             <h4>09:00 - 09:10 Intro</h4>
 
-            <div class="favourite" id='f0900_sal1'>Sal 1<br /><img alt="favourite" class="fav-icon" src="http://raiom.no/tdconf-test-program/star_unsel.png"/></div><h5 id="l0900_sal1" class="expand"><span class="post-title">Vel valgte ord og dagen er i gang! - Selda Ekiz</span><span class="expand-icon"><img alt="favourite" src="http://raiom.no/tdconf-test-program/arrow-down.png"/></span></h5>
+            <div class="favourite" id='f0900_sal1'>
+                Sal 1
+                <br />
+                <img alt="favourite" class="fav-icon" src="http://raiom.no/tdconf-test-program/star_unsel.png"/>
+            </div>
+            <h5 id="l0900_sal1" class="expand">
+                <span class="post-title">Vel valgte ord og dagen er i gang! - Selda Ekiz</span>
+                <span class="expand-icon">
+                    <img alt="favourite" src="http://raiom.no/tdconf-test-program/arrow-down.png"/>
+                </span>
+            </h5>
             <div id="p0900_sal1" class="show hidden">
                 <p><img class="show-img" src="http://raiom.no/tdconf-test-program/img/Speaker_picture-Selda-Ekiz-400x400.jpg">Selda Ekiz er kjent fra NRKs Newton og Barn Ingen Adgang og har en mastergrad i Fysikk fra UiB. Med andre ord har hun et diplom på “nerd”. Hun elsker internett og mener at verden hadde vært et mye bedre sted om folk hadde virkelig utnyttet nettet for det den er lagd for: spre kunnskap</p>
                 <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
             </div>
-            <hr/>
         </section>
 
 
@@ -87,12 +98,10 @@
                 <p>Doulas Crockford is a senior JavaScript Architect and well known for introducing and maintaining JSON format. He’s a well known presenter and author of several books. He’s a former chief architect at Yahoo and now at PayPal. <a href='http://www.crockford.com/'>Check out his homepage for more information.</a></p>
                 <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
             </div>
-            <hr/>
         </section>
 
-        <section class="program-post odd">
+        <section class="program-post sep">
             <h4>10:00 - 10:15 Pause</h4>
-            <hr/>
         </section>
 
         <section class="program-post">
@@ -132,12 +141,10 @@
                 <p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
                 <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
             </div>
-            <hr/>
         </section>
 
-        <section class="program-post odd">
+        <section class="program-post sep">
             <h4>10:45 - 11:00 Pause</h4>
-            <hr/>
         </section>
 
         <section class="program-post">
@@ -176,12 +183,10 @@
                 <p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
                 <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
             </div>
-            <hr/>
         </section>
 
-        <section class="program-post odd">
+        <section class="program-post sep">
             <h4>11:30 - 11:45 Pause</h4>
-            <hr/>
         </section>
 
         <section class="program-post">
@@ -222,35 +227,25 @@
                 <p>Torgeir arbeider med prosessforbedring og kunnskapsforvaltning i programvarebedrifter som seniorforsker i SINTEF. Spesielt har han fokusert på smidige utviklingsmetoder, teamarbeid i systemutvikling og bruk av intranettverktøy for læring mellom prosjekter. Han er medforfatter på boka “Praktisk prosessforbedring – en håndbok for IT-bedrifter” på Fagbokforlaget.</p>
                 <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
             </div>
-            <hr/>
         </section>
 
-        <section class="program-post odd">
+        <section class="program-post sep">
             <h4>12:15 - 13:15 Lunsj</h4>
-            <hr/>
         </section>
 
         <script type="text/javascript">
             YUI().use('json-parse', 'json-stringify', 'node', 'cookie', 'event', function (Y) {
                 var favourites;
                 try {
-                    favourites = Y.JSON.parse(Y.Cookie.get("favourites"));
+                    favourites = Y.JSON.parse(Y.Cookie.get("favourites")) || {};
                 } catch (e) {
                     favourites = {};
                 }
-
                 console.log('favourites ' + Y.JSON.stringify(favourites));
 
-                // Simulate cookie with selected elements
-                //var favourites = {'f1015_sal1': true, 'f1100_sal2': true, 'f1100_sal4': false};
-                //var favourites = {};
-
-                // Select all elements found in stored cookie (TODO)
                 Y.all("img.fav-icon").each(function (img, idx, list) {
                     var list_id = img.ancestor().get('id');
-                    //var show_id     = 'l' + list_id.substring(1);
 
-                    console.log('list_id ' + list_id + ' - ' + Y.JSON.stringify(favourites));
                     if (list_id in favourites && favourites[list_id]) {
                         img.set('src', 'http://raiom.no/tdconf-test-program/star_sel.png');
                     }
@@ -262,7 +257,6 @@
                     var list_id = e.currentTarget.get('id');
 
                     var img = e.currentTarget.get('children');
-                    console.log("list_id " + list_id + " - img " + img + " - " + (list_id in favourites) + " - " + favourites[list_id]);
                     if (list_id in favourites && favourites[list_id]) {
                         favourites[list_id] = false;
                         img.set('src', 'http://raiom.no/tdconf-test-program/star_unsel.png');

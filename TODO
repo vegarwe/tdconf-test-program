@@ -1,4 +1,7 @@
-- When shoing a span we should jump there
+TODO:
 - Expand all
 - Expand from url
-- store cookie
+
+Done
+- (done) store cookie
+- (void) When showing a span we should jump there
