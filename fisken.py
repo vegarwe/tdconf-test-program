@@ -10,8 +10,15 @@ def write_line(line):
 def write_raw(raw):
     sys.stdout.write(raw)
 
+def write_file(file):
+    with open(file) as f:
+        for line in f.readlines():
+            sys.stdout.write(line)
+
 def main():
     write_raw(header)
+
+    write_file("program.css")
 
     for show_time in show_times:
         write_line('<section class="program-post%s">' % show_time[2])
@@ -36,16 +43,16 @@ def main():
                 write_line('        </span>')
                 write_line('    </h5>')
                 write_line('    <div id="p%s" class="show hidden">' % id)
-                write_line('        <p>')
-                write_line('            <img class="show-img" src="%s">' % program['image'])
-                write_line('            %s' % program['abstract'])
-                write_line('        </p>')
-                write_line('        <p>%s</p>' % program['about'])
+                write_line('        <img class="show-img" src="%s">' % program['image'])
+                write_line('        %s' % program['abstract'])
+                write_line('        %s' % program['about'])
                 write_line('        <p class="post-social"><img class="post-social" src="http://raiom.no/tdconf-test-program/facebook.png"/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>')
                 write_line('    </div>')
 
         write_line('</section>')
         write_raw('\n\n')
+
+    write_file("program.js")
 
     write_raw(footer)
 
@@ -55,49 +62,22 @@ show_times = [
         ['0910', '09:10 - 10:00 Keynote',       ''],
         ['1000', '10:00 - 10:15 Pause',         ' sep'],
         ['1015', '10:15 - 10:45',               ''],
+        ['1045', '11:00 - 10:45 Pause',         ' sep'],
     ]
 
 programs = [
-        {'id': '0900_sal1', 'title': "Vel valgte ord og dagen er i gang!",                                  'author': "Selda Ekiz",         'image': "http://raiom.no/tdconf-test-program/img/Speaker_picture-Selda-Ekiz-400x400.jpg",                  'abstract':"", 'about':"Selda Ekiz er kjent fra NRKs Newton og Barn Ingen Adgang og har en mastergrad i Fysikk fra UiB. Med andre ord har hun et diplom på “nerd”. Hun elsker internett og mener at verden hadde vært et mye bedre sted om folk hadde virkelig utnyttet nettet for det den er lagd for: spre kunnskap"},
-        {'id': '1015_sal1', 'title': "Challenges and opportunities in the changing digital landscape",      'author': "Stefania Montagna",  'image': "http://raiom.no/tdconf-test-program/img/Linkedin_Picture_StefaniaMontagna-400x400.jpg",           'abstract':"The changing digital landscapes challenges developers to think differently. Audience fragmentation, the increasing use of digital technologies beyond the screen and the high level of competition in the digital landscape offers tremendous opportunities and also relevant challenges to anyone trying to make it in this space. The talk will explore how Google is looking to support developers, both technically and from a business perspective, in their strive to develop for the world of tomorrow.", 'about': "Stefania Montagna is a Strategic Partner Manager in Google’s Online Partnership Group, focusing on the Nordics. Stefaniaspecializes in sales of revenue-generating solutions for publishers and app developers. She has previously contributed to maintaining the Google Blog “Inside AdWords” for Norway, and has organized several Google events in Norway and Sweden."},
-        {'id': '1015_sal2', 'title': "Introduction to bluetooth low energy – Overview and radio (EN)(1/2)", 'author': "Carles Cufi",        'image': "http://raiom.no/tdconf-test-program/img/1acd14a-2-400x400.jpg",                                   'abstract':"The presentation will focus on the basics of Bluetooth Low Energy, including a brief overview of the radio, a concise description of all layers in the protocol stack and their inner workings as well as current applications and development platforms offered by my Norwegian employer and IC design company Nordic Semiconductor.", 'about': "Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series."},
-        {'id': '0910_sal1', 'title': "The better parts (EN)",                                               'author': "Douglas Crockford",  'image': "http://raiom.no/tdconf-test-program/img/Speaker_Picture-DouglasCrockford_Feb2013-400x400.jpeg",   'abstract': "This talk is about using programming languages more effectively, and using that experience to create and select better programming languages. There are bad practices in software development that are so old and well established that it is difficult to recognize the problems they cause. There will be a review of the new good parts in ES6. JSON will also be mentioned.", 'about': "Doulas Crockford is a senior JavaScript Architect and well known for introducing and maintaining JSON format. He’s a well known presenter and author of several books. He’s a former chief architect at Yahoo and now at PayPal. <a href='http://www.crockford.com/'>Check out his homepage for more information.</a>"},
+        {'id': '0900_sal1', 'title': "Vel valgte ord og dagen er i gang!",                                  'author': "Selda Ekiz",                             'image': "http://raiom.no/tdconf-test-program/img/Speaker_picture-Selda-Ekiz-400x400.jpg",                  'abstract': "",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         'about': "<p>Selda Ekiz er kjent fra NRKs Newton og Barn Ingen Adgang og har en mastergrad i Fysikk fra UiB. Med andre ord har hun et diplom på “nerd”. Hun elsker internett og mener at verden hadde vært et mye bedre sted om folk hadde virkelig utnyttet nettet for det den er lagd for: spre kunnskap</p>"},
+        {'id': '0910_sal1', 'title': "The better parts (EN)",                                               'author': "Douglas Crockford",                      'image': "http://raiom.no/tdconf-test-program/img/Speaker_Picture-DouglasCrockford_Feb2013-400x400.jpeg",   'abstract': "<p>This talk is about using programming languages more effectively, and using that experience to create and select better programming languages. There are bad practices in software development that are so old and well established that it is difficult to recognize the problems they cause. There will be a review of the new good parts in ES6. JSON will also be mentioned.</p>",                                                                                                                                   'about': "<p>Doulas Crockford is a senior JavaScript Architect and well known for introducing and maintaining JSON format. He’s a well known presenter and author of several books. He’s a former chief architect at Yahoo and now at PayPal. <a href='http://www.crockford.com/'>Check out his homepage for more information.</a></p>"},
+
+        {'id': '1015_sal1', 'title': "Challenges and opportunities in the changing digital landscape",      'author': "Stefania Montagna",                      'image': "http://raiom.no/tdconf-test-program/img/Linkedin_Picture_StefaniaMontagna-400x400.jpg",           'abstract': "<p>The changing digital landscapes challenges developers to think differently. Audience fragmentation, the increasing use of digital technologies beyond the screen and the high level of competition in the digital landscape offers tremendous opportunities and also relevant challenges to anyone trying to make it in this space. The talk will explore how Google is looking to support developers, both technically and from a business perspective, in their strive to develop for the world of tomorrow.</p>",    'about': "<p>Stefania Montagna is a Strategic Partner Manager in Google’s Online Partnership Group, focusing on the Nordics. Stefaniaspecializes in sales of revenue-generating solutions for publishers and app developers. She has previously contributed to maintaining the Google Blog “Inside AdWords” for Norway, and has organized several Google events in Norway and Sweden.</p>"},
+        {'id': '1015_sal2', 'title': "Introduction to bluetooth low energy – Overview and radio (EN)(1/2)", 'author': "Carles Cufi",                            'image': "http://raiom.no/tdconf-test-program/img/1acd14a-2-400x400.jpg",                                   'abstract': "<p>The presentation will focus on the basics of Bluetooth Low Energy, including a brief overview of the radio, a concise description of all layers in the protocol stack and their inner workings as well as current applications and development platforms offered by my Norwegian employer and IC design company Nordic Semiconductor.</p>",                                                                                                                                                                             'about': "<p>Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series.</p>"},
+        {'id': '1015_sal3', 'title': "Among the sleep, En drøm blir virkelig",                              'author': "Adrian Tingstad Husby",                  'image': "http://raiom.no/tdconf-test-program/img/adrian-400x400.jpg",                                      'abstract': "<p>Våren 2011 leverte en gjeng studenter bacheloroppgaven sin ‘Among the Sleep’. Den lille prototypen av et dataspill hadde allerede da motatt støtte for vidreutvikling, men ingen av studentene ante egentlig hva de begikk seg ut på. Etter tre år ble spillet til sist ble gitt ut 29. mai i år. Blant annet The Guardian og New York Times har siden delt sin entusiasme rundt spillet. Hvordan tok det form?</p>",                                                                                                   'about': "<p>Adrian er ‘potet’ og alt-mulig-mann i Krillbite Studio. Under utviklingen av Among the Sleep har han jobbet med alt fra markedsføring og spilldesign, til lyddesign og administrativt arbeid.</p>"},
+        {'id': '1015_sal4', 'title': "Managing CSS projects with ITCSS (EN)",                               'author': "Harry Roberts",                          'image': "http://raiom.no/tdconf-test-program/img/harry-400x400.jpg",                                       'abstract': "",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         'about': "<p>Harry is a Consultant Front-end Architect, designer, developer, writer and speaker from the UK. Previously a Senior Developer at BSkyB, he now helps tech teams all over the world build better products. He specialises in authoring and scaling large front-ends; he writes on the subjects of maintainability, architecture, performance, OOCSS and more at csswizardry.com; he is the lead and sole developer of inuitcss, a powerful, scalable, Sass-based, BEM, OOCSS framework; he Tweets at @csswizardry.</p>"},
+        {'id': '1015_sal5', 'title': "The lower cog challenge (EN)(1/2)",                                   'author': "Niall Merrigan and Glenn F. Henriksen",  'image': "http://raiom.no/tdconf-test-program/img/Niall_Glenn-400x400.jpg",                                 'abstract': "<p>This isn’t a cage match, this is a TopGear style challenge between the old dog and the not so old dog. In this session, Niall will defend WebForms while Glenn shouts about MVC and they will show how the two fare in a set of grueling technical challenges… Expect the two presenters to trade insults while trying to show the technical superiority of their chosen stack.</p>",                                                                                                                                      'about': "<p>Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at certsandprogs.com<p><p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>"},
 ]
 
-
 """
-            <div class='favourite' id='f1015_sal3'>Sal 3<br /><img alt="favourite" class="fav-icon" src="http://raiom.no/tdconf-test-program/star_unsel.png"/></div><h5 id='l1015_sal3' class="expand"><span class='post-title'>Among the sleep, En drøm blir virkelig - Adrian Tingstad Husby</span><span class="expand-icon"><img alt="favourite" src="http://raiom.no/tdconf-test-program/arrow-down.png"/></span></h5>
-            <div id="p1015_sal3" class="show hidden">
-                <p><img class="show-img" src="http://raiom.no/tdconf-test-program/img/adrian-400x400.jpg">Våren 2011 leverte en gjeng studenter bacheloroppgaven sin ‘Among the Sleep’. Den lille prototypen av et dataspill hadde allerede da motatt støtte for vidreutvikling, men ingen av studentene ante egentlig hva de begikk seg ut på. Etter tre år ble spillet til sist ble gitt ut 29. mai i år. Blant annet The Guardian og New York Times har siden delt sin entusiasme rundt spillet. Hvordan tok det form?</p>
-                <p>Adrian er ‘potet’ og alt-mulig-mann i Krillbite Studio. Under utviklingen av Among the Sleep har han jobbet med alt fra markedsføring og spilldesign, til lyddesign og administrativt arbeid.</p>
-                <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
-            </div>
 
-            <div class='favourite' id='f1015_sal4'>Sal 4<br /><img alt="favourite" class="fav-icon" src="http://raiom.no/tdconf-test-program/star_unsel.png"/></div><h5 id='l1015_sal4' class="expand"><span class='post-title'>Managing CSS projects with ITCSS (EN) - Harry Roberts</span><span class="expand-icon"><img alt="favourite" src="http://raiom.no/tdconf-test-program/arrow-down.png"/></span></h5>
-            <div id="p1015_sal4" class="show hidden">
-                <p><img class="show-img" src="http://raiom.no/tdconf-test-program/img/harry-400x400.jpg">Harry is a Consultant Front-end Architect, designer, developer, writer and speaker from the UK. Previously a Senior Developer at BSkyB, he now helps tech teams all over the world build better products. He specialises in authoring and scaling large front-ends; he writes on the subjects of maintainability, architecture, performance, OOCSS and more at csswizardry.com; he is the lead and sole developer of inuitcss, a powerful, scalable, Sass-based, BEM, OOCSS framework; he Tweets at @csswizardry.</p>
-                <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
-            </div>
-
-            <div class='favourite' id='f1015_sal5'>Sal 5<br /><img alt="favourite" class="fav-icon" src="http://raiom.no/tdconf-test-program/star_unsel.png"/></div><h5 id='l1015_sal5' class="expand"><span class='post-title'>The lower cog challenge (EN)(1/2) - Niall Merrigan and Glenn F. Henriksen</span><span class="expand-icon"><img alt="favourite" src="http://raiom.no/tdconf-test-program/arrow-down.png"/></span></h5>
-            <div id="p1015_sal5" class="show hidden">
-                <p><img class="show-img" src="http://raiom.no/tdconf-test-program/img/Niall_Glenn-400x400.jpg">This isn’t a cage match, this is a TopGear style challenge between the old dog and the not so old dog. In this session, Niall will defend WebForms while Glenn shouts about MVC and they will show how the two fare in a set of grueling technical challenges… Expect the two presenters to trade insults while trying to show the technical superiority of their chosen stack.</p>
-                <p>Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at certsandprogs.com<p>
-                <p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
-                <p class="post-social"><img class="post-social" src='http://raiom.no/tdconf-test-program/facebook.png'/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>
-            </div>
-        </section>
-
-
-        <section class="program-post sep">
-            <h4>10:00 - 10:15 Pause</h4>
-        </section>
-
-        <!---------------------------------------------------------------------------->
-
-        <section class="program-post sep">
-            <h4>10:45 - 11:00 Pause</h4>
-        </section>
 
         <section class="program-post">
             <h4>11:00 - 11:30</h4>
@@ -184,63 +164,6 @@ programs = [
         <section class="program-post sep">
             <h4>12:15 - 13:15 Lunsj</h4>
         </section>
-
-        <script type="text/javascript">
-            YUI().use('json-parse', 'json-stringify', 'node', 'cookie', 'event', function (Y) {
-                var favourites;
-                try {
-                    favourites = Y.JSON.parse(Y.Cookie.get("favourites")) || {};
-                } catch (e) {
-                    favourites = {};
-                }
-                console.log('favourites ' + Y.JSON.stringify(favourites));
-
-                Y.all("img.fav-icon").each(function (img, idx, list) {
-                    var list_id = img.ancestor().get('id');
-
-                    if (list_id in favourites && favourites[list_id]) {
-                        img.set('src', 'http://raiom.no/tdconf-test-program/star_sel.png');
-                    }
-                });
-
-                // Handle favourite icon clicked
-                var favourite = Y.all(".favourite");
-                favourite.on("click", function (e) {
-                    var list_id = e.currentTarget.get('id');
-
-                    var img = e.currentTarget.get('children');
-                    if (list_id in favourites && favourites[list_id]) {
-                        favourites[list_id] = false;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/star_unsel.png');
-                    } else {
-                        favourites[list_id] = true;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/star_sel.png');
-                    }
-                    Y.Cookie.set('favourites', Y.JSON.stringify(favourites), { expires: new Date("January 12, 2025") });
-                });
-
-                // Handle expand clicked
-                var expand = Y.all(".expand");
-                expand.on("click", function (e) {
-                    var list_id     = e.currentTarget.get('id');
-                    var show_id     = 'p' + list_id.substring(1);
-
-                    var img         = e.currentTarget.one('img');
-                    var show        = Y.one('#' + show_id);
-
-                    var hidden = show.hasClass('hidden');
-                    if (hidden) {
-                        show.removeClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/arrow-up.png');
-                    } else {
-                        show.addClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/arrow-down.png');
-                    }
-                });
-            });
-        </script>
-    </body>
-</html>
 """
 
 header = """
