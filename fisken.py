@@ -21,8 +21,8 @@ def main():
     write_file("program.css")
 
     for show_time in show_times:
-        write_line('<section class="program-post%s">' % show_time[2])
-        write_line('    <h4>%s</h4>' % (show_time[1]))
+        write_line('<section class="program-post %s">' % show_time[2])
+        write_line('    <h4  class="program-post">%s</h4>' % (show_time[1]))
 
         for room in xrange(1,6):
             for program in programs:
@@ -31,22 +31,30 @@ def main():
                 if room         != int(id[8: ]): continue
 
                 write_raw('\n')
-                write_line('    <div class="favourite" id="f%s">' % id)
-                write_line('        Sal %s' % room)
-                write_line('        <br />')
-                write_line('        <img alt="favourite" class="fav-icon" src="http://raiom.no/tdconf-test-program/star_unsel.png">')
-                write_line('    </div>')
-                write_line('    <h5 id="l%s" class="expand">' % id)
-                write_line('        <span class="post-title">%s - %s</span>' % (program['title'], program['author']))
-                write_line('        <span class="expand-icon">')
-                write_line('            <img alt="favourite" src="http://raiom.no/tdconf-test-program/arrow-down.png">')
-                write_line('        </span>')
-                write_line('    </h5>')
+                write_line('    <table id="t%s">' % id)
+                write_line('        <tr>')
+                write_line('            <th class="favourite" id="f%s">' % id)
+                write_line('                <span>Sal&nbsp;%s</span>' % room)
+                write_line('                <img alt="favourite" class="fav-icon" src="http://raiom.no/tdconf-test-program/star_unsel.png">')
+                write_line('            </th>')
+                write_line('            <td id="l%s" class="expand post-title">' % id)
+                write_line('                <h3 class="post-title">')
+                write_line('                    %s' % (program['title']))
+                write_line('                </h3>')
+                write_line('                <h5 class="post-title">')
+                write_line('                    %s' % (program['author']))
+                write_line('                </h5>')
+                write_line('            </td>')
+                write_line('            <td class="kebab">')
+                write_line('                <img alt="favourite" src="http://raiom.no/tdconf-test-program/arrow-down.png">')
+                write_line('            </td>')
+                write_line('        </tr>')
+                write_line('    </table>')
                 write_line('    <div id="p%s" class="show hidden">' % id)
                 write_line('        <img class="show-img" src="%s">' % program['image'])
                 write_line('        %s' % program['abstract'])
                 write_line('        %s' % program['about'])
-                write_line('        <p class="post-social"><img class="post-social" src="http://raiom.no/tdconf-test-program/facebook.png"/>del - <img class="post-social" src="http://raiom.no/tdconf-test-program/twitter.png">twit</p>')
+                write_line('        <p class="footer">Sal&nbsp;%s  %s</p>' % (room, show_time[1]))
                 write_line('    </div>')
 
         write_line('</section>')
@@ -57,12 +65,12 @@ def main():
     write_raw(footer)
 
 show_times = [
-        ['0800', '08:00 - 09:00 Registrering',  ' sep'],
+        ['0800', '08:00 - 09:00 Registrering',  'sep'],
         ['0900', '09:00 - 09:10 Intro',         ''],
         ['0910', '09:10 - 10:00 Keynote',       ''],
-        ['1000', '10:00 - 10:15 Pause',         ' sep'],
+        ['1000', '10:00 - 10:15 Pause',         'sep'],
         ['1015', '10:15 - 10:45',               ''],
-        ['1045', '10:45 - 11:00 Pause',         ' sep'],
+        ['1045', '10:45 - 11:00 Pause',         'sep'],
         ['1100', '11:00 - 11:30',               ''],
     ]
 
@@ -140,9 +148,11 @@ header = """
                 color: #eee;
             }
 
+            /*
             .favourite { border: 1px solid green; }
             .expand    { border: 1px solid red; }
             .show      { border: 1px solid yellow; }
+            */
         </style>
 
     </head>

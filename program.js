@@ -50,5 +50,11 @@
                         img.set('src', 'http://raiom.no/tdconf-test-program/arrow-down.png');
                     }
                 });
+
+                // Handle kebab clicked
+                var expand = Y.all(".kebab-icon");
+                expand.on("click", function (e) {
+                    console.log('kebab');
+                });
             });
         </script>

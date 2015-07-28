@@ -1,21 +1,36 @@
         <style>
-            section.program-post.sep {
+            section.program-post {
                 background-color: #333;
+                padding: 4px;
+                margin-bottom: 20px;
             }
-            div.favourite {
-                float: left;
-                clear: both;
-                padding-left: 5px;
-                padding-right: 5px;
+            h4.program-post {
+                padding: 14px;
+                margin: 0;
             }
-            span.post-title {
+            th.favourite span {
+                font-size: 0.8em;
+            }
+            td.post-title {
                 width: 97%;
-                display: table-cell;
+                color: #00ff80;
             }
-            span.expand-icon {
-                display: table-cell;
+            h3.post-title {
                 margin: 0;
                 padding: 0;
+                cursor: pointer;
+                cursor: hand;
+            }
+            h5.post-title {
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                cursor: hand;
+            }
+            td.kebab-icon {
+            }
+            ul.kebab {
+                position: relative;
             }
             div.show {
                 margin-left: 20px;
@@ -24,12 +39,25 @@
                 height: 156px;
                 width:  156px;
                 float: left;
-                margin-bottom: 10px;
+                margin: 0 4px 4px 0;
             }
-            p.post-social {
+            p.footer {
                 clear: left;
+                text-align: right;
             }
-            img.post-social {
-                height: 30px;
+            .kebab {
+              cursor: pointer;
+              position: relative;
+              display: inline-block;
+              box-sizing: border-box;
+              padding: 0 16px;
+              top: 12px;
+            }
+            figure {
+              width: 6px;
+              height: 6px;
+              border-radius: 5px;
+              background: $cyan;
+              margin: 3px 0;
             }
         </style>
