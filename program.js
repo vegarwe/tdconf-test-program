@@ -12,7 +12,7 @@
                     var list_id = img.ancestor().get('id');
 
                     if (list_id in favourites && favourites[list_id]) {
-                        img.set('src', 'http://raiom.no/tdconf-test-program/star_sel.png');
+                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/star_sel.png');
                     }
                 });
 
@@ -24,10 +24,10 @@
                     var img = e.currentTarget.get('children');
                     if (list_id in favourites && favourites[list_id]) {
                         favourites[list_id] = false;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/star_unsel.png');
+                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/star_unsel.png');
                     } else {
                         favourites[list_id] = true;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/star_sel.png');
+                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/star_sel.png');
                     }
                     Y.Cookie.set('favourites', Y.JSON.stringify(favourites), { expires: new Date("January 12, 2025") });
                 });
@@ -44,10 +44,10 @@
                     var hidden = show.hasClass('hidden');
                     if (hidden) {
                         show.removeClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/arrow-up.png');
+                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/arrow-up.png');
                     } else {
                         show.addClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/arrow-down.png');
+                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/arrow-down.png');
                     }
                 });
 
