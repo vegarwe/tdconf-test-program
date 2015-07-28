@@ -8,32 +8,40 @@
                 padding: 14px;
                 margin: 0;
             }
+            table.program-post {
+                width: 100%;
+            }
+            th.favourite {
+                width: 28px;
+            }
             th.favourite span {
                 font-size: 0.8em;
             }
             td.post-title {
-                width: 97%;
                 color: #00ff80;
             }
-            h3.post-title {
-                margin: 0;
-                padding: 0;
+            .post-title-h3 {
+                font-size: 1.4em;
+                margin:  0 0 0 5px;
+                padding: 0 0 0 5px;
                 cursor: pointer;
                 cursor: hand;
             }
-            h5.post-title {
-                margin: 0;
-                padding: 0;
+            .post-title-h5 {
+                font-size: 1.0em;
+                margin:  0 0 0 5px;
+                padding: 0 0 0 5px;
                 cursor: pointer;
                 cursor: hand;
             }
             td.kebab-icon {
+                width: 30px;
             }
             ul.kebab {
                 position: relative;
             }
             div.show {
-                margin-left: 20px;
+                margin-left: 16px;
             }
             img.show-img {
                 height: 156px;
@@ -53,7 +61,7 @@
               padding: 0 16px;
               top: 12px;
             }
-            figure {
+            .kebab figure {
               width: 6px;
               height: 6px;
               border-radius: 5px;
