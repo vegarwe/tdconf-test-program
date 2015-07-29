@@ -34,11 +34,8 @@
                 cursor: pointer;
                 cursor: hand;
             }
-            td.kebab-icon {
+            td.expand-icon {
                 width: 30px;
-            }
-            ul.kebab {
-                position: relative;
             }
             div.show {
                 margin-left: 16px;
@@ -52,20 +49,5 @@
             p.footer {
                 clear: left;
                 text-align: right;
-            }
-            .kebab {
-              cursor: pointer;
-              position: relative;
-              display: inline-block;
-              box-sizing: border-box;
-              padding: 0 16px;
-              top: 12px;
-            }
-            .kebab figure {
-              width: 6px;
-              height: 6px;
-              border-radius: 5px;
-              background: $cyan;
-              margin: 3px 0;
             }
         </style>
