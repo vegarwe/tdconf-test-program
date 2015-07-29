@@ -17,12 +17,11 @@ def write_file(file):
 
 def main():
     write_raw(header)
-
     write_file("program.css")
 
     for show_time in show_times:
-        write_line('<section class="program-post %s">' % show_time[2])
-        write_line('    <h4  class="program-post">%s</h4>' % (show_time[1]))
+        write_line('<section class="program-time %s">' % show_time[2])
+        write_line('    <h4  class="program-time">%s</h4>' % (show_time[1]))
 
         for room in xrange(1,6):
             for program in programs:
@@ -32,18 +31,17 @@ def main():
 
                 write_raw('\n')
                 write_line('    <div id="f%s" class="program-post">' % id)
-                write_line('        <table class="program-post">')
+                write_line('        <table class="program-header">')
                 write_line('            <tr>')
                 write_line('                <th class="favourite">')
-                write_line('                    <span>Sal&nbsp;%s</span>' % room)
-                write_line('                    </br>')
+                write_line('                    <div>Sal&nbsp;%s</div>' % room)
                 write_line('                    <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/star_unsel.png">')
                 write_line('                </th>')
-                write_line('                <td class="expand post-title">')
-                write_line('                    <div class="post-title-h3">')
+                write_line('                <td class="expand">')
+                write_line('                    <div class="program-title">')
                 write_line('                        %s' % (program['title']))
                 write_line('                    </div>')
-                write_line('                    <div class="post-title-h5">')
+                write_line('                    <div class="post-author">')
                 write_line('                        %s' % (program['author']))
                 write_line('                    </div>')
                 write_line('                </td>')
@@ -52,11 +50,11 @@ def main():
                 write_line('                </td>')
                 write_line('            </tr>')
                 write_line('        </table>')
-                write_line('        <div class="show hidden">')
-                write_line('            <img class="show-img" src="%s">' % program['image'])
+                write_line('        <div class="program-talk hidden">')
+                write_line('            <img class="program-img" src="%s">' % program['image'])
                 write_line('            %s' % program['abstract'])
                 write_line('            %s' % program['about'])
-                write_line('            <p class="footer">Sal&nbsp;%s  %s</p>' % (room, show_time[1]))
+                write_line('            <p class="program-footer">Sal&nbsp;%s  %s</p>' % (room, show_time[1]))
                 write_line('        </div>')
                 write_line('    </div>')
 
@@ -64,7 +62,6 @@ def main():
         write_raw('\n\n')
 
     write_file("program.js")
-
     write_raw(footer)
 
 show_times = [

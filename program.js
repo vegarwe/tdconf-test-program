@@ -37,14 +37,14 @@
                 expand.on("click", function (e) {
                     var program = e.currentTarget.ancestor('div.program-post');
                     var img     = program.one('img.expand-icon');
-                    var show    = program.one('div.show');
-                    var hidden = show.hasClass('hidden');
+                    var talk    = program.one('div.program-talk');
+                    var hidden = talk.hasClass('hidden');
 
                     if (hidden) {
-                        show.removeClass('hidden');
+                        talk.removeClass('hidden');
                         img.set('src', 'http://raiom.no/tdconf-test-program/ico/arrow-up.png');
                     } else {
-                        show.addClass('hidden');
+                        talk.addClass('hidden');
                         img.set('src', 'http://raiom.no/tdconf-test-program/ico/arrow-down.png');
                     }
                 });

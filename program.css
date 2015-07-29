@@ -1,14 +1,14 @@
         <style>
-            section.program-post {
+            section.program-time {
                 background-color: #333;
                 padding: 4px;
                 margin-bottom: 20px;
             }
-            h4.program-post {
+            h4.program-time {
                 padding: 14px;
                 margin: 0;
             }
-            table.program-post {
+            table.program-header {
                 width: 100%;
             }
             th.favourite {
@@ -17,17 +17,15 @@
             th.favourite span {
                 font-size: 0.8em;
             }
-            td.post-title {
+            .program-title {
                 color: #00ff80;
-            }
-            .post-title-h3 {
                 font-size: 1.4em;
                 margin:  0 0 0 5px;
                 padding: 0 0 0 5px;
                 cursor: pointer;
                 cursor: hand;
             }
-            .post-title-h5 {
+            .post-author {
                 font-size: 1.0em;
                 margin:  0 0 0 5px;
                 padding: 0 0 0 5px;
@@ -37,16 +35,16 @@
             td.expand-icon {
                 width: 30px;
             }
-            div.show {
+            div.program-talk {
                 margin-left: 16px;
             }
-            img.show-img {
+            img.program-img {
                 height: 156px;
                 width:  156px;
                 float: left;
                 margin: 0 4px 4px 0;
             }
-            p.footer {
+            p.program-footer {
                 clear: left;
                 text-align: right;
             }
