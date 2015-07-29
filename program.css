@@ -5,7 +5,7 @@
                 margin-bottom: 20px;
             }
             h4.program-time {
-                padding: 14px;
+                padding: 14px 14px 14px 2px;
                 margin: 0;
             }
             table.program-header {
@@ -19,11 +19,16 @@
             }
             .program-title {
                 color: #00ff80;
-                font-size: 1.4em;
                 margin:  0 0 0 5px;
                 padding: 0 0 0 5px;
                 cursor: pointer;
                 cursor: hand;
+
+                font-family: proxima-nova;
+                font-size: 22px;
+                font-weight: 900;
+                text-rendering: optimizeLegibility;
+                text-transform: uppercase;
             }
             .post-author {
                 font-size: 1.0em;
