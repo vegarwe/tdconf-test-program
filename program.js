@@ -17,8 +17,7 @@
                 });
 
                 // Handle favourite icon clicked
-                var favourite = Y.all(".favourite");
-                favourite.on("click", function (e) {
+                Y.all(".favourite").on("click", function (e) {
                     var show_id = e.currentTarget.ancestor('div.program-post').get('id');
 
                     var img = e.currentTarget.one('img');
@@ -33,8 +32,7 @@
                 });
 
                 // Handle expand clicked
-                var expand = Y.all(".expand");
-                expand.on("click", function (e) {
+                Y.all(".expand").on("click", function (e) {
                     var program = e.currentTarget.ancestor('div.program-post');
                     var img     = program.one('img.expand-icon');
                     var talk    = program.one('div.program-talk');
@@ -46,6 +44,23 @@
                     } else {
                         talk.addClass('hidden');
                         img.set('src', 'http://raiom.no/tdconf-test-program/ico/arrow-down.png');
+                    }
+                });
+
+                // Handle expand-all clicked
+                Y.all(".expand-all").on("click", function (e) {
+                    var talks   = Y.all("div.program-talk");
+                    var imgs    = Y.all("img.expand-icon");
+
+                    var hidden = true;
+                    if (! e.currentTarget.hasClass('expanded')) {
+                        e.currentTarget.addClass('expanded');
+                        talks.removeClass('hidden');
+                        imgs.set('src', 'http://raiom.no/tdconf-test-program/ico/arrow-up.png');
+                    } else {
+                        e.currentTarget.removeClass('expanded');
+                        talks.addClass('hidden');
+                        imgs.set('src', 'http://raiom.no/tdconf-test-program/ico/arrow-down.png');
                     }
                 });
             });
