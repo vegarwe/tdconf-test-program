@@ -1,5 +1,6 @@
         <script type="text/javascript">
             YUI().use('json-parse', 'json-stringify', 'node', 'cookie', 'event', function (Y) {
+                // Favourite all from cookie
                 var favourites;
                 try {
                     favourites = Y.JSON.parse(Y.Cookie.get("favourites")) || {};
@@ -15,6 +16,10 @@
                         img.set('src', 'http://raiom.no/tdconf-test-program/ico/star_sel.png');
                     }
                 });
+
+                // Expand post based on #id
+                // TODO
+
 
                 // Handle favourite icon clicked
                 Y.all(".favourite").on("click", function (e) {
