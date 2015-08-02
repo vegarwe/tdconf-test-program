@@ -1,8 +1,20 @@
         <style>
+            td.program-notification {
+                font-size: 13px;
+                color: #666;
+                width: 100%;
+                text-align: right;
+                vertical-align: bottom;
+            }
+            div.program-clear {
+                clear: both;
+                border: 1px solid green;
+            }
             section.program-time {
                 background-color: #333;
                 padding: 4px;
                 margin-bottom: 20px;
+
             }
             h4.program-time {
                 padding: 14px 14px 14px 2px;

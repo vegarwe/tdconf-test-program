@@ -24,7 +24,13 @@ def main():
     write_raw(header)
     write_file("program.css")
 
-    write_line('<div class="expand-all">+</div>')
+    write_raw('\n')
+    write_line('<h2>Program 2015</h2>')
+    write_raw('\n')
+    write_line('<table><tr>')
+    write_line('<td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>')
+    write_line('<td class="expand-all"><img src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_2x.png"></td>')
+    write_line('</tr></table>')
 
     for show_time in show_times:
         write_line('<section class="program-time %s">' % show_time[4])
@@ -55,7 +61,7 @@ def main():
                 write_line('            <tr>')
                 write_line('                <th class="favourite">')
                 write_line('                    <div>Sal&nbsp;%s</div>' % room)
-                write_line('                    <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/star_unsel.png">')
+                write_line('                    <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">')
                 write_line('                </th>')
                 write_line('                <td class="expand">')
                 write_line('                    <div class="program-title">')
@@ -66,7 +72,7 @@ def main():
                 write_line('                    </div>')
                 write_line('                </td>')
                 write_line('                <td class="expand expand-icon">')
-                write_line('                    <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/arrow-down.png">')
+                write_line('                    <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">')
                 write_line('                </td>')
                 write_line('            </tr>')
                 write_line('        </table>')
@@ -85,7 +91,7 @@ def main():
                 if program['twitter'] != '':
                     write_line('              <a href="https://twitter.com/intent/follow?screen_name=%s">follow</a>  |' % program['twitter'])
                 write_line('              <a href="%s">share</a> |' % (face_url))
-                write_line('              Sal&nbsp;%s  %s' % (room, show_time[1]))
+                write_line('              Sal&nbsp;%s %s' % (room, show_time[1]))
                 write_line('            </p>')
                 write_line('        </div>')
                 write_line('    </div>')

@@ -1,8 +1,7 @@
 TODO:
-- Test multiple 'chapters' in abstract (surrounded by <p>)
-- 'caption' for Facebook links
-- Expand all
 - Expand from url
+- Test multiple 'chapters' in input .csv (about and abstract), should get surrounded by <p>
+- 'caption' for Facebook links
 * Nedover kebab
 * Print: Med sjerner
 * Print: Ekspander alt
@@ -16,5 +15,6 @@ Done
 * (done) Heading some STEFANIA
 * (done) Fix alignment med favourites stjerne
 * (done) Padding rundt bilder
-* Change pointer when hovering h3 h5
+* (done) Change pointer when hovering h3 h5
+- (done) Expand all
 
