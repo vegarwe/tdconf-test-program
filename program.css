@@ -11,6 +11,9 @@
             table.program-header {
                 width: 100%;
             }
+            th, td {
+                vertical-align: top;
+            }
             th.favourite {
                 width: 28px;
             }
@@ -25,17 +28,21 @@
                 cursor: hand;
 
                 font-family: proxima-nova;
-                font-size: 22px;
+                font-size: 18px;
                 font-weight: 900;
                 text-rendering: optimizeLegibility;
                 text-transform: uppercase;
             }
             .post-author {
-                font-size: 1.0em;
                 margin:  0 0 0 5px;
                 padding: 0 0 0 5px;
                 cursor: pointer;
                 cursor: hand;
+
+                font-family: proxima-nova;
+                font-size: 16px;
+                font-weight: 900;
+                text-rendering: optimizeLegibility;
             }
             td.expand-icon {
                 width: 30px;

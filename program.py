@@ -19,6 +19,8 @@ def main():
     write_raw(header)
     write_file("program.css")
 
+    write_line('<div class="expand-all">+</div>')
+
     for show_time in show_times:
         write_line('<section class="program-time %s">' % show_time[2])
         write_line('    <h4  class="program-time">%s</h4>' % (show_time[1]))
@@ -47,6 +49,14 @@ def main():
                 write_line('                </td>')
                 write_line('                <td class="expand expand-icon">')
                 write_line('                    <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/arrow-down.png">')
+                #write_line('                    <div class="kebab">')
+                #write_line('                      <figure></figure>')
+                #write_line('                      <ul class="dropdown">')
+                #write_line('                        <li><a href="http://www.g.com">Favourite</a></li>')
+                #write_line('                        <li><a href="http://www.g.com">Expand</a></li>')
+                #write_line('                        <li><a href="http://www.g.com">Link</a></li>')
+                #write_line('                      </ul>')
+                #write_line('                    </div>')
                 write_line('                </td>')
                 write_line('            </tr>')
                 write_line('        </table>')
@@ -54,7 +64,9 @@ def main():
                 write_line('            <img class="program-img" src="%s">' % program['image'])
                 write_line('            %s' % program['abstract'])
                 write_line('            %s' % program['about'])
-                write_line('            <p class="program-footer">Sal&nbsp;%s  %s</p>' % (room, show_time[1]))
+                write_line('            <p class="program-footer">')
+                write_line('              Sal&nbsp;%s  %s' % (room, show_time[1]))
+                write_line('            </p>')
                 write_line('        </div>')
                 write_line('    </div>')
 
