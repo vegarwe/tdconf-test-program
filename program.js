@@ -16,7 +16,7 @@
                         var show_id = img.ancestor('div.program-post').get('id');
 
                         if (show_id in favourites && favourites[show_id]) {
-                            img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_star_white_24dp_1x.png');
+                            img.set('src', 's/ic_star_white_24dp_1x.png');
                         }
                     });
 
@@ -29,10 +29,10 @@
                     var img = e.currentTarget.one('img');
                     if (show_id in favourites && favourites[show_id]) {
                         favourites[show_id] = false;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png');
+                        img.set('src', 's/ic_star_border_white_24dp_1x.png');
                     } else {
                         favourites[show_id] = true;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_star_white_24dp_1x.png');
+                        img.set('src', 's/ic_star_white_24dp_1x.png');
                     }
                     Y.Cookie.set('favourites', Y.JSON.stringify(favourites), { expires: new Date("January 12, 2025") });
                 });
@@ -45,10 +45,10 @@
 
                     if (hidden) {
                         talk.removeClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_less_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_less_white_24dp_1x.png');
                     } else {
                         talk.addClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_more_white_24dp_1x.png');
                     }
                 }
 
@@ -76,13 +76,13 @@
                     if (! e.currentTarget.hasClass('expanded')) {
                         e.currentTarget.addClass('expanded');
                         talks.removeClass('hidden');
-                        imgs.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_less_white_24dp_1x.png');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_less_white_24dp_2x.png');
+                        imgs.set('src', 's/ic_expand_less_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_less_white_24dp_2x.png');
                     } else {
                         e.currentTarget.removeClass('expanded');
                         talks.addClass('hidden');
-                        imgs.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_2x.png');
+                        imgs.set('src', 's/ic_expand_more_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_more_white_24dp_2x.png');
                     }
                 });
             });

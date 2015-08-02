@@ -1,14 +1,15 @@
         <style>
+            table.program-top {
+                width: 100%;
+            }
             td.program-notification {
                 font-size: 13px;
                 color: #666;
-                width: 100%;
                 text-align: right;
                 vertical-align: bottom;
             }
-            div.program-clear {
-                clear: both;
-                border: 1px solid green;
+            td.expand-all {
+                width: 48px;
             }
             section.program-time {
                 background-color: #333;
@@ -66,6 +67,9 @@
                 width:  156px;
                 float: left;
                 margin: 0 4px 4px 0;
+            }
+            img.program-social {
+                height: 16px;
             }
             p.program-footer {
                 clear: left;

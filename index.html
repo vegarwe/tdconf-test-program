@@ -17,6 +17,9 @@
                 background-color: #01131C;
                 color: #eee;
             }
+            a {
+                color: #00ff80;
+            }
 
             /*
             .favourite { border: 1px solid green; }
@@ -29,16 +32,17 @@
 
     <body>
         <style>
+            table.program-top {
+                width: 100%;
+            }
             td.program-notification {
                 font-size: 13px;
                 color: #666;
-                width: 100%;
                 text-align: right;
                 vertical-align: bottom;
             }
-            div.program-clear {
-                clear: both;
-                border: 1px solid green;
+            td.expand-all {
+                width: 48px;
             }
             section.program-time {
                 background-color: #333;
@@ -97,6 +101,9 @@
                 float: left;
                 margin: 0 4px 4px 0;
             }
+            img.program-social {
+                height: 16px;
+            }
             p.program-footer {
                 clear: left;
                 text-align: right;
@@ -105,9 +112,9 @@
 
         <h2>Program 2015</h2>
 
-        <table><tr>
+        <table class="program-top"><tr>
         <td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>
-        <td class="expand-all"><img src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_2x.png"></td>
+        <td class="expand-all"><img src="s/ic_expand_more_white_24dp_2x.png"></td>
         </tr></table>
         <section class="program-time sep">
             <h4  class="program-time">08:00 - 09:00 Registrering</h4>
@@ -122,7 +129,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;1</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -133,7 +140,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -141,10 +148,9 @@
                     <img class="program-img" src="http://raiom.no/tdconf-test-program/img/Speaker_picture-Selda-Ekiz-400x400.jpg">
                     <p>Selda Ekiz er kjent fra NRKs Newton og Barn Ingen Adgang og har en mastergrad i Fysikk fra UiB. Med andre ord har hun et diplom på “nerd”. Hun elsker internett og mener at verden hadde vært et mye bedre sted om folk hadde virkelig utnyttet nettet for det den er lagd for: spre kunnskap</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f0900_sal1">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=monlilli">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FSpeaker_picture-Selda-Ekiz-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f0900_sal1&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f0900_sal1&name=Vel+valgte+ord+og+dagen+er+i+gang%21&caption=09%3A00+%23tdconf+2015&description=&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;1 09:00
+                      <a href="https://twitter.com/intent/follow?screen_name=monlilli"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FSpeaker_picture-Selda-Ekiz-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f0900_sal1&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f0900_sal1&name=Vel+valgte+ord+og+dagen+er+i+gang%21&caption=09%3A00+%23tdconf+2015&description=&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f0900_sal1">Sal&nbsp;1 - 09:00</a>
                     </p>
                 </div>
             </div>
@@ -159,7 +165,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;1</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -170,7 +176,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -179,9 +185,8 @@
                     <p>This talk is about using programming languages more effectively, and using that experience to create and select better programming languages. There are bad practices in software development that are so old and well established that it is difficult to recognize the problems they cause. There will be a review of the new good parts in ES6. JSON will also be mentioned.</p>
                     <p>Doulas Crockford is a senior JavaScript Architect and well known for introducing and maintaining JSON format. He’s a well known presenter and author of several books. He’s a former chief architect at Yahoo and now at PayPal. <a href='http://www.crockford.com/'>Check out his homepage for more information.</a></p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f0910_sal1">link</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FSpeaker_Picture-DouglasCrockford_Feb2013-400x400.jpeg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f0910_sal1&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f0910_sal1&name=The+better+parts+%28EN%29&caption=09%3A10+%23tdconf+2015&description=This+talk+is+about+using+programming+languages+more+effectively%2C+and+using+that+experience+to+create+and+select+better+programming+languages.+There+are+bad+practices+in+software+development+that+are+so+old+and+well+established+that+it+is+difficult+to+recognize+the+problems+they+cause.+There+will+be+a+review+of+the+new+good+parts+in+ES6.+JSON+will+also+be+mentioned.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;1 09:10
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FSpeaker_Picture-DouglasCrockford_Feb2013-400x400.jpeg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f0910_sal1&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f0910_sal1&name=The+better+parts+%28EN%29&caption=09%3A10+%23tdconf+2015&description=This+talk+is+about+using+programming+languages+more+effectively%2C+and+using+that+experience+to+create+and+select+better+programming+languages.+There+are+bad+practices+in+software+development+that+are+so+old+and+well+established+that+it+is+difficult+to+recognize+the+problems+they+cause.+There+will+be+a+review+of+the+new+good+parts+in+ES6.+JSON+will+also+be+mentioned.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f0910_sal1">Sal&nbsp;1 - 09:10</a>
                     </p>
                 </div>
             </div>
@@ -201,7 +206,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;1</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -212,7 +217,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -221,10 +226,9 @@
                     <p>The changing digital landscapes challenges developers to think differently. Audience fragmentation, the increasing use of digital technologies beyond the screen and the high level of competition in the digital landscape offers tremendous opportunities and also relevant challenges to anyone trying to make it in this space. The talk will explore how Google is looking to support developers, both technically and from a business perspective, in their strive to develop for the world of tomorrow.</p>
                     <p>Stefania Montagna is a Strategic Partner Manager in Google’s Online Partnership Group, focusing on the Nordics. Stefaniaspecializes in sales of revenue-generating solutions for publishers and app developers. She has previously contributed to maintaining the Google Blog “Inside AdWords” for Norway, and has organized several Google events in Norway and Sweden.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1015_sal1">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=s_montagna">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FLinkedin_Picture_StefaniaMontagna-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal1&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal1&name=Challenges+and+opportunities+in+the+changing+digital+landscape&caption=10%3A15+%23tdconf+2015&description=The+changing+digital+landscapes+challenges+developers+to+think+differently.+Audience+fragmentation%2C+the+increasing+use+of+digital+technologies+beyond+the+screen+and+the+high+level+of+competition+in+the+digital+landscape+offers+tremendous+opportunities+and+also+relevant+challenges+to+anyone+trying+to+make+it+in+this+space.+The+talk+will+explore+how+Google+is+looking+to+support+developers%2C+both+technically+and+from+a+business+perspective%2C+in+their+strive+to+develop+for+the+world+of+tomorrow.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;1 10:15
+                      <a href="https://twitter.com/intent/follow?screen_name=s_montagna"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FLinkedin_Picture_StefaniaMontagna-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal1&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal1&name=Challenges+and+opportunities+in+the+changing+digital+landscape&caption=10%3A15+%23tdconf+2015&description=The+changing+digital+landscapes+challenges+developers+to+think+differently.+Audience+fragmentation%2C+the+increasing+use+of+digital+technologies+beyond+the+screen+and+the+high+level+of+competition+in+the+digital+landscape+offers+tremendous+opportunities+and+also+relevant+challenges+to+anyone+trying+to+make+it+in+this+space.+The+talk+will+explore+how+Google+is+looking+to+support+developers%2C+both+technically+and+from+a+business+perspective%2C+in+their+strive+to+develop+for+the+world+of+tomorrow.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1015_sal1">Sal&nbsp;1 - 10:15</a>
                     </p>
                 </div>
             </div>
@@ -234,7 +238,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;2</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -245,7 +249,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -254,10 +258,9 @@
                     <p>The presentation will focus on the basics of Bluetooth Low Energy, including a brief overview of the radio, a concise description of all layers in the protocol stack and their inner workings as well as current applications and development platforms offered by my Norwegian employer and IC design company Nordic Semiconductor.</p>
                     <p>Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1015_sal2">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=carlescufi">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2F1acd14a-2-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal2&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal2&name=Introduction+to+bluetooth+low+energy+%E2%80%93+Overview+and+radio+%28EN%29%281%2F2%29&caption=10%3A15+%23tdconf+2015&description=The+presentation+will+focus+on+the+basics+of+Bluetooth+Low+Energy%2C+including+a+brief+overview+of+the+radio%2C+a+concise+description+of+all+layers+in+the+protocol+stack+and+their+inner+workings+as+well+as+current+applications+and+development+platforms+offered+by+my+Norwegian+employer+and+IC+design+company+Nordic+Semiconductor.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;2 10:15
+                      <a href="https://twitter.com/intent/follow?screen_name=carlescufi"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2F1acd14a-2-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal2&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal2&name=Introduction+to+bluetooth+low+energy+%E2%80%93+Overview+and+radio+%28EN%29%281%2F2%29&caption=10%3A15+%23tdconf+2015&description=The+presentation+will+focus+on+the+basics+of+Bluetooth+Low+Energy%2C+including+a+brief+overview+of+the+radio%2C+a+concise+description+of+all+layers+in+the+protocol+stack+and+their+inner+workings+as+well+as+current+applications+and+development+platforms+offered+by+my+Norwegian+employer+and+IC+design+company+Nordic+Semiconductor.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1015_sal2">Sal&nbsp;2 - 10:15</a>
                     </p>
                 </div>
             </div>
@@ -267,7 +270,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;3</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -278,7 +281,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -287,10 +290,9 @@
                     <p>Våren 2011 leverte en gjeng studenter bacheloroppgaven sin ‘Among the Sleep’. Den lille prototypen av et dataspill hadde allerede da motatt støtte for vidreutvikling, men ingen av studentene ante egentlig hva de begikk seg ut på. Etter tre år ble spillet til sist ble gitt ut 29. mai i år. Blant annet The Guardian og New York Times har siden delt sin entusiasme rundt spillet. Hvordan tok det form?</p>
                     <p>Adrian er ‘potet’ og alt-mulig-mann i Krillbite Studio. Under utviklingen av Among the Sleep har han jobbet med alt fra markedsføring og spilldesign, til lyddesign og administrativt arbeid.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1015_sal3">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=AdrianTingHus">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fadrian-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal3&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal3&name=Among+the+sleep%2C+En+dr%C3%B8m+blir+virkelig&caption=10%3A15+%23tdconf+2015&description=V%C3%A5ren+2011+leverte+en+gjeng+studenter+bacheloroppgaven+sin+%E2%80%98Among+the+Sleep%E2%80%99.+Den+lille+prototypen+av+et+dataspill+hadde+allerede+da+motatt+st%C3%B8tte+for+vidreutvikling%2C+men+ingen+av+studentene+ante+egentlig+hva+de+begikk+seg+ut+p%C3%A5.+Etter+tre+%C3%A5r+ble+spillet+til+sist+ble+gitt+ut+29.+mai+i+%C3%A5r.+Blant+annet+The+Guardian+og+New+York+Times+har+siden+delt+sin+entusiasme+rundt+spillet.+Hvordan+tok+det+form%3F&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;3 10:15
+                      <a href="https://twitter.com/intent/follow?screen_name=AdrianTingHus"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fadrian-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal3&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal3&name=Among+the+sleep%2C+En+dr%C3%B8m+blir+virkelig&caption=10%3A15+%23tdconf+2015&description=V%C3%A5ren+2011+leverte+en+gjeng+studenter+bacheloroppgaven+sin+%E2%80%98Among+the+Sleep%E2%80%99.+Den+lille+prototypen+av+et+dataspill+hadde+allerede+da+motatt+st%C3%B8tte+for+vidreutvikling%2C+men+ingen+av+studentene+ante+egentlig+hva+de+begikk+seg+ut+p%C3%A5.+Etter+tre+%C3%A5r+ble+spillet+til+sist+ble+gitt+ut+29.+mai+i+%C3%A5r.+Blant+annet+The+Guardian+og+New+York+Times+har+siden+delt+sin+entusiasme+rundt+spillet.+Hvordan+tok+det+form%3F&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1015_sal3">Sal&nbsp;3 - 10:15</a>
                     </p>
                 </div>
             </div>
@@ -300,7 +302,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;4</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -311,7 +313,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -319,10 +321,9 @@
                     <img class="program-img" src="http://raiom.no/tdconf-test-program/img/harry-400x400.jpg">
                     <p>Harry is a Consultant Front-end Architect, designer, developer, writer and speaker from the UK. Previously a Senior Developer at BSkyB, he now helps tech teams all over the world build better products. He specialises in authoring and scaling large front-ends; he writes on the subjects of maintainability, architecture, performance, OOCSS and more at csswizardry.com; he is the lead and sole developer of inuitcss, a powerful, scalable, Sass-based, BEM, OOCSS framework; he Tweets at @csswizardry.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1015_sal4">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=csswizardry">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fharry-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal4&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal4&name=Managing+CSS+projects+with+ITCSS+%28EN%29&caption=10%3A15+%23tdconf+2015&description=&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;4 10:15
+                      <a href="https://twitter.com/intent/follow?screen_name=csswizardry"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fharry-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal4&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal4&name=Managing+CSS+projects+with+ITCSS+%28EN%29&caption=10%3A15+%23tdconf+2015&description=&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1015_sal4">Sal&nbsp;4 - 10:15</a>
                     </p>
                 </div>
             </div>
@@ -332,7 +333,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;5</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -343,7 +344,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -352,9 +353,8 @@
                     <p>This isn’t a cage match, this is a TopGear style challenge between the old dog and the not so old dog. In this session, Niall will defend WebForms while Glenn shouts about MVC and they will show how the two fare in a set of grueling technical challenges… Expect the two presenters to trade insults while trying to show the technical superiority of their chosen stack.</p>
                     <p>Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at certsandprogs.com</p><p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1015_sal5">link</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FNiall_Glenn-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal5&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1015_sal5&name=The+lower+cog+challenge+%28EN%29%281%2F2%29&caption=10%3A15+%23tdconf+2015&description=This+isn%E2%80%99t+a+cage+match%2C+this+is+a+TopGear+style+challenge+between+the+old+dog+and+the+not+so+old+dog.+In+this+session%2C+Niall+will+defend+WebForms+while+Glenn+shouts+about+MVC+and+they+will+show+how+the+two+fare+in+a+set+of+grueling+technical+challenges%E2%80%A6+Expect+the+two+presenters+to+trade+insults+while+trying+to+show+the+technical+superiority+of+their+chosen+stack.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;5 10:15
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FNiall_Glenn-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal5&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1015_sal5&name=The+lower+cog+challenge+%28EN%29%281%2F2%29&caption=10%3A15+%23tdconf+2015&description=This+isn%E2%80%99t+a+cage+match%2C+this+is+a+TopGear+style+challenge+between+the+old+dog+and+the+not+so+old+dog.+In+this+session%2C+Niall+will+defend+WebForms+while+Glenn+shouts+about+MVC+and+they+will+show+how+the+two+fare+in+a+set+of+grueling+technical+challenges%E2%80%A6+Expect+the+two+presenters+to+trade+insults+while+trying+to+show+the+technical+superiority+of+their+chosen+stack.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1015_sal5">Sal&nbsp;5 - 10:15</a>
                     </p>
                 </div>
             </div>
@@ -374,7 +374,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;1</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -385,7 +385,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -394,10 +394,9 @@
                     <p>Du har kanskje hørt om AngularJS? Du tenkte kanskje også “Herregud, ikke enda et JavaScript-rammeverk”. Da er denne talken noe for deg. I løpet av 30 minutter skal vi demonstrere de egenskapene og funksjonene som gjør rammeverket så populært.</p>
                     <p>Lokal fersk systemutvikler som har oppholdt seg for det meste i .NET verden de siste to årene. Er over gjennomsnittet interessert i design, prototyping og front-end utvikling. Liker å utforske ny teknologi og fortelle kolleger om dem.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1100_sal1">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=skarchr">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fskarchr-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal1&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal1&name=%7B%7B+angularjs.title+%7D%7D&caption=11%3A00+%23tdconf+2015&description=Du+har+kanskje+h%C3%B8rt+om+AngularJS%3F+Du+tenkte+kanskje+ogs%C3%A5+%E2%80%9CHerregud%2C+ikke+enda+et+JavaScript-rammeverk%E2%80%9D.+Da+er+denne+talken+noe+for+deg.+I+l%C3%B8pet+av+30+minutter+skal+vi+demonstrere+de+egenskapene+og+funksjonene+som+gj%C3%B8r+rammeverket+s%C3%A5+popul%C3%A6rt.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;1 11:00
+                      <a href="https://twitter.com/intent/follow?screen_name=skarchr"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fskarchr-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal1&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal1&name=%7B%7B+angularjs.title+%7D%7D&caption=11%3A00+%23tdconf+2015&description=Du+har+kanskje+h%C3%B8rt+om+AngularJS%3F+Du+tenkte+kanskje+ogs%C3%A5+%E2%80%9CHerregud%2C+ikke+enda+et+JavaScript-rammeverk%E2%80%9D.+Da+er+denne+talken+noe+for+deg.+I+l%C3%B8pet+av+30+minutter+skal+vi+demonstrere+de+egenskapene+og+funksjonene+som+gj%C3%B8r+rammeverket+s%C3%A5+popul%C3%A6rt.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1100_sal1">Sal&nbsp;1 - 11:00</a>
                     </p>
                 </div>
             </div>
@@ -407,7 +406,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;2</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -418,7 +417,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -427,10 +426,9 @@
                     <p>The presentation will focus on the basics of Bluetooth Low Energy, including a brief overview of the radio, a concise description of all layers in the protocol stack and their inner workings as well as current applications and development platforms offered by my Norwegian employer and IC design company Nordic Semiconductor.</p>
                     <p>Starting at Parrot in Paris with version 1.0 of the Bluetooth specification, I wrote one of the first protocol stacks to be shipped on a commercial product, and have been involved with the development and implementation of Bluetooth devices and systems ever since. I am currently employed by Nordic Semiconductor, where I am responsible for the APIs offered by the protocol stack on the nRF51 series.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1100_sal2">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=carlescufi">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2F1acd14a-2-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal2&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal2&name=Introduction+to+Bluetooth+low+energy+%E2%80%93+Protocol+stack+and+applications+%28EN%29%282%2F2%29&caption=11%3A00+%23tdconf+2015&description=The+presentation+will+focus+on+the+basics+of+Bluetooth+Low+Energy%2C+including+a+brief+overview+of+the+radio%2C+a+concise+description+of+all+layers+in+the+protocol+stack+and+their+inner+workings+as+well+as+current+applications+and+development+platforms+offered+by+my+Norwegian+employer+and+IC+design+company+Nordic+Semiconductor.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;2 11:00
+                      <a href="https://twitter.com/intent/follow?screen_name=carlescufi"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2F1acd14a-2-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal2&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal2&name=Introduction+to+Bluetooth+low+energy+%E2%80%93+Protocol+stack+and+applications+%28EN%29%282%2F2%29&caption=11%3A00+%23tdconf+2015&description=The+presentation+will+focus+on+the+basics+of+Bluetooth+Low+Energy%2C+including+a+brief+overview+of+the+radio%2C+a+concise+description+of+all+layers+in+the+protocol+stack+and+their+inner+workings+as+well+as+current+applications+and+development+platforms+offered+by+my+Norwegian+employer+and+IC+design+company+Nordic+Semiconductor.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1100_sal2">Sal&nbsp;2 - 11:00</a>
                     </p>
                 </div>
             </div>
@@ -440,7 +438,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;3</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -451,7 +449,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -459,10 +457,9 @@
                     <img class="program-img" src="http://raiom.no/tdconf-test-program/img/chrisheilmann-400x400.jpg">
                     <p>Chris Heilmann has dedicated a lot of his time making the web better. Originally coming from a radio journalism background, he built his first web site from scratch around 1997 and spent the following years working on lots of large, international web sites. He then spent a few years in Yahoo building products and explaining and training people and is now at Mozilla. Chris wrote and contributed to six books on web development and wrote many articles and hundreds of blog posts.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1100_sal3">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=codepo8">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fchrisheilmann-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal3&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal3&name=How+HTML5+missed+its+graduation+day+%28EN%29&caption=11%3A00+%23tdconf+2015&description=&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;3 11:00
+                      <a href="https://twitter.com/intent/follow?screen_name=codepo8"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Fchrisheilmann-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal3&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal3&name=How+HTML5+missed+its+graduation+day+%28EN%29&caption=11%3A00+%23tdconf+2015&description=&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1100_sal3">Sal&nbsp;3 - 11:00</a>
                     </p>
                 </div>
             </div>
@@ -472,7 +469,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;4</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -483,7 +480,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -492,10 +489,9 @@
                     <p>Hva er det som skjer når man plasserer forskjellige individer i en gruppen sammen for å utvikle IT-løsninger? Har vi glemt at et team består av individer, når vi forsøker å bruke metodikk og verktøy for å få et dysfunksjonelt team til å prestere bedre? Hvordan kan man skape et bedre og mer positivt utviklingsmiljø?</p>
                     <p>Med over 16 års erfaring med systemutvikling, har jeg begynt å få en forståelse for hva som fungerer bra og dårlig med utviklingsteam. Erfaring fra mange store og små prosjekter i Norge og utlandet, jobber som konsulent i Kristiansand for Deepmind.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1100_sal4">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=sondreb">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FSondre_small-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal4&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal4&name=Dysfunksjonelle+utviklingsteam&caption=11%3A00+%23tdconf+2015&description=Hva+er+det+som+skjer+n%C3%A5r+man+plasserer+forskjellige+individer+i+en+gruppen+sammen+for+%C3%A5+utvikle+IT-l%C3%B8sninger%3F+Har+vi+glemt+at+et+team+best%C3%A5r+av+individer%2C+n%C3%A5r+vi+fors%C3%B8ker+%C3%A5+bruke+metodikk+og+verkt%C3%B8y+for+%C3%A5+f%C3%A5+et+dysfunksjonelt+team+til+%C3%A5+prestere+bedre%3F+Hvordan+kan+man+skape+et+bedre+og+mer+positivt+utviklingsmilj%C3%B8%3F&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;4 11:00
+                      <a href="https://twitter.com/intent/follow?screen_name=sondreb"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FSondre_small-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal4&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal4&name=Dysfunksjonelle+utviklingsteam&caption=11%3A00+%23tdconf+2015&description=Hva+er+det+som+skjer+n%C3%A5r+man+plasserer+forskjellige+individer+i+en+gruppen+sammen+for+%C3%A5+utvikle+IT-l%C3%B8sninger%3F+Har+vi+glemt+at+et+team+best%C3%A5r+av+individer%2C+n%C3%A5r+vi+fors%C3%B8ker+%C3%A5+bruke+metodikk+og+verkt%C3%B8y+for+%C3%A5+f%C3%A5+et+dysfunksjonelt+team+til+%C3%A5+prestere+bedre%3F+Hvordan+kan+man+skape+et+bedre+og+mer+positivt+utviklingsmilj%C3%B8%3F&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1100_sal4">Sal&nbsp;4 - 11:00</a>
                     </p>
                 </div>
             </div>
@@ -505,7 +501,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;5</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -516,7 +512,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -525,9 +521,8 @@
                     <p>Niall is the Head of Custom Software Development in Capgemini Stavanger,He is also a Microsoft ASP.NET MVP, and general rugby nut (which means he shouts a lot). He has a passion for web technologies, security and whiskey which can lead to some interesting discussions. He can be found on twitter as @nmerrigan and hosts a blog at <a href='http://certsandprogs.com'>certsandprogs.com</a></p>
                     <p>Glenn F. Henriksen har byttet kode mot mat i ca 15 år og for tiden jobber han som mentor, evangelist og utvikler hos Capgemini Stavanger. Her får han sjangsen til å utforske nye verktøy, prosesser og teknologi og å stadig forbedre måten han og hans kollegaer jobber med kode, oppgaver og prosjekter. Han er levende opptatt av kunnskapsformidling og har blitt utpekt som ASP.NET MVP av Microsoft.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1100_sal5">link</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FNiall_Glenn-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal5&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1100_sal5&name=The+lower+cog+challenge+%28EN%29%282%2F2%29&caption=11%3A00+%23tdconf+2015&description=Niall+is+the+Head+of+Custom+Software+Development+in+Capgemini+Stavanger%2CHe+is+also+a+Microsoft+ASP.NET+MVP%2C+and+general+rugby+nut+%28which+means+he+shouts+a+lot%29.+He+has+a+passion+for+web+technologies%2C+security+and+whiskey+which+can+lead+to+some+interesting+discussions.+He+can+be+found+on+twitter+as+%40nmerrigan+and+hosts+a+blog+at+%3Ca+href%3D%27http%3A%2F%2Fcertsandprogs.com%27%3Ecertsandprogs.com%3C%2Fa%3E&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;5 11:00
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FNiall_Glenn-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal5&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1100_sal5&name=The+lower+cog+challenge+%28EN%29%282%2F2%29&caption=11%3A00+%23tdconf+2015&description=Niall+is+the+Head+of+Custom+Software+Development+in+Capgemini+Stavanger%2CHe+is+also+a+Microsoft+ASP.NET+MVP%2C+and+general+rugby+nut+%28which+means+he+shouts+a+lot%29.+He+has+a+passion+for+web+technologies%2C+security+and+whiskey+which+can+lead+to+some+interesting+discussions.+He+can+be+found+on+twitter+as+%40nmerrigan+and+hosts+a+blog+at+%3Ca+href%3D%27http%3A%2F%2Fcertsandprogs.com%27%3Ecertsandprogs.com%3C%2Fa%3E&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1100_sal5">Sal&nbsp;5 - 11:00</a>
                     </p>
                 </div>
             </div>
@@ -547,7 +542,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;1</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -558,7 +553,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -567,10 +562,9 @@
                     <p>How do we utilize sensor and user data to create experiences in the digital world? We all know that smart devices have sensors, but how can we use this as a resource to acquire information about the user and his environment? And how can we use this information to design a better user experience that is both unobtrusive and transparent? The simple answer: we create adaptive systems.</p>
                     <p>Avi (@xgmedia) is a longtime interactive and web design professional with thirteen years of experience. He is an avid enthusiast of technology and is often invited to speak about emerging design and UX trends. Avi is currently working as an Independent UI/UX Consultant at his studio, XG Media and is the Founder of UX Salon (@uxsalon), an international UX Design conference in Tel-Aviv.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1245_sal1">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=xgmedia">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FAvi-Edit-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal1&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal1&name=Creating+adaptive+experiences+%28EN%29&caption=12%3A45+%23tdconf+2015&description=How+do+we+utilize+sensor+and+user+data+to+create+experiences+in+the+digital+world%3F+We+all+know+that+smart+devices+have+sensors%2C+but+how+can+we+use+this+as+a+resource+to+acquire+information+about+the+user+and+his+environment%3F+And+how+can+we+use+this+information+to+design+a+better+user+experience+that+is+both+unobtrusive+and+transparent%3F+The+simple+answer%3A+we+create+adaptive+systems.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;1 12:45
+                      <a href="https://twitter.com/intent/follow?screen_name=xgmedia"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FAvi-Edit-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal1&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal1&name=Creating+adaptive+experiences+%28EN%29&caption=12%3A45+%23tdconf+2015&description=How+do+we+utilize+sensor+and+user+data+to+create+experiences+in+the+digital+world%3F+We+all+know+that+smart+devices+have+sensors%2C+but+how+can+we+use+this+as+a+resource+to+acquire+information+about+the+user+and+his+environment%3F+And+how+can+we+use+this+information+to+design+a+better+user+experience+that+is+both+unobtrusive+and+transparent%3F+The+simple+answer%3A+we+create+adaptive+systems.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1245_sal1">Sal&nbsp;1 - 12:45</a>
                     </p>
                 </div>
             </div>
@@ -580,7 +574,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;2</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -591,7 +585,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -600,10 +594,9 @@
                     <p>De er overalt, de er magiske og deres kunnskap kan hjelpe deg å skille deg ut fra mengden. De er også raske og kan spare deg for mye unødvendig knot. Ønsker du å forstå dem, og lære å bruke dem riktig? Har du lyst til å beseire monstre som etterlater spor [stacktraces] i loggfilene dine, eller ønsker du å kunne takle navnekonvensjoner i koden din bedre? Kanskje vil du bare bedre forstå besvergelser som har blitt skrevet av andre?</p><p>I dette foredraget vil vi ta et dypere dykk inn i regulære uttrykk, deres bruk og ikke minst ta en titt på noen praktiske eksempler. Vi vil starte med en kort introduksjon til den mystiske verden av regulære uttrykk og friske opp våre kunnskaper om disse før vi fortsetter videre til mer avanserte emner som grupper, greed og backtracking. Interaktiv presentasjon med masse demoer.</p>
                     <p>Rustam Mehmandarov har en mastergrad fra Institutt for Informatikk, UiO. Han har over 8 års erfaring som utvikler, teknisk prosjektleder og leveranseansvarlig i både store og små prosjekter. Han har interesse for smidig utvikling, webutvikling, arkitektur og geografiske informasjonssystemer. Han er også en guru på både Linux og Windows. På fritiden er han veldig glad i å trene, når han ikke sitter og koder i Python eller Java. Han snakker også ofte på forskjellige konferanser som JavaZone, NDC, Boosterconf og diverse faglige events på universiteter over hele Norge.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1245_sal2">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=rmehmandarov">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FRustam-400x400.png&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal2&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal2&name=The+magic+of+regular+expressions&caption=12%3A45+%23tdconf+2015&description=De+er+overalt%2C+de+er+magiske+og+deres+kunnskap+kan+hjelpe+deg+%C3%A5+skille+deg+ut+fra+mengden.+De+er+ogs%C3%A5+raske+og+kan+spare+deg+for+mye+un%C3%B8dvendig+knot.+%C3%98nsker+du+%C3%A5+forst%C3%A5+dem%2C+og+l%C3%A6re+%C3%A5+bruke+dem+riktig%3F+Har+du+lyst+til+%C3%A5+beseire+monstre+som+etterlater+spor+%5Bstacktraces%5D+i+loggfilene+dine%2C+eller+%C3%B8nsker+du+%C3%A5+kunne+takle+navnekonvensjoner+i+koden+din+bedre%3F+Kanskje+vil+du+bare+bedre+forst%C3%A5+besvergelser+som+har+blitt+skrevet+av+andre%3F%0AI+dette+foredraget+vil+vi+ta+et+dypere+dykk+inn+i+regul%C3%A6re+uttrykk%2C+deres+bruk+og+ikke+minst+ta+en+titt+p%C3%A5+noen+praktiske+eksempler.+Vi+vil+starte+med+en+kort+introduksjon+til+den+mystiske+verden+av+regul%C3%A6re+uttrykk+og+friske+opp+v%C3%A5re+kunnskaper+om+disse+f%C3%B8r+vi+fortsetter+videre+til+mer+avanserte+emner+som+grupper%2C+greed+og+backtracking.+Interaktiv+presentasjon+med+masse+demoer.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;2 12:45
+                      <a href="https://twitter.com/intent/follow?screen_name=rmehmandarov"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FRustam-400x400.png&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal2&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal2&name=The+magic+of+regular+expressions&caption=12%3A45+%23tdconf+2015&description=De+er+overalt%2C+de+er+magiske+og+deres+kunnskap+kan+hjelpe+deg+%C3%A5+skille+deg+ut+fra+mengden.+De+er+ogs%C3%A5+raske+og+kan+spare+deg+for+mye+un%C3%B8dvendig+knot.+%C3%98nsker+du+%C3%A5+forst%C3%A5+dem%2C+og+l%C3%A6re+%C3%A5+bruke+dem+riktig%3F+Har+du+lyst+til+%C3%A5+beseire+monstre+som+etterlater+spor+%5Bstacktraces%5D+i+loggfilene+dine%2C+eller+%C3%B8nsker+du+%C3%A5+kunne+takle+navnekonvensjoner+i+koden+din+bedre%3F+Kanskje+vil+du+bare+bedre+forst%C3%A5+besvergelser+som+har+blitt+skrevet+av+andre%3F%0AI+dette+foredraget+vil+vi+ta+et+dypere+dykk+inn+i+regul%C3%A6re+uttrykk%2C+deres+bruk+og+ikke+minst+ta+en+titt+p%C3%A5+noen+praktiske+eksempler.+Vi+vil+starte+med+en+kort+introduksjon+til+den+mystiske+verden+av+regul%C3%A6re+uttrykk+og+friske+opp+v%C3%A5re+kunnskaper+om+disse+f%C3%B8r+vi+fortsetter+videre+til+mer+avanserte+emner+som+grupper%2C+greed+og+backtracking.+Interaktiv+presentasjon+med+masse+demoer.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1245_sal2">Sal&nbsp;2 - 12:45</a>
                     </p>
                 </div>
             </div>
@@ -613,7 +606,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;3</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -624,7 +617,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -633,10 +626,9 @@
                     <p>Jakten på det perfekte systemet ender ofte opp med noe midt i mellom. Løsninger tilpasset hvert enkelt fagområde, som dekker alle behov og gjør alle fornøyde, men ikke laget for å samarbeide. Så hva er det midt i mellom som gjør at ting allikevel ser ut til å fungere? Folk! Manuell aktivitet mellom systemer kan og BØR automatiseres. Få et innblikk i hvorfor og hvordan papirflytterne kan avløses.</p>
                     <p>Anita jakter på de løsningene som gir mest tilbake til brukerne. Brukerne skal aldri føle seg motarbeidet når de bruker sine arbeidsverktøy. Hvis behovene ikke er støttet så er heller ikke systemet ferdig. Forenkling og digitalisering er hennes daglige visjon. Som programmerer og systemutvikler har Anita beveget seg fra Java til .NET og inn i en verden med C#, WCF og BizTalk.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1245_sal3">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=anitaskylstad">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FAnita10x15_ny_klippet-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal3&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal3&name=Papirflytting+eller+integrasjon%3F+La+systemene+snakke+sammen%21&caption=12%3A45+%23tdconf+2015&description=Jakten+p%C3%A5+det+perfekte+systemet+ender+ofte+opp+med+noe+midt+i+mellom.+L%C3%B8sninger+tilpasset+hvert+enkelt+fagomr%C3%A5de%2C+som+dekker+alle+behov+og+gj%C3%B8r+alle+forn%C3%B8yde%2C+men+ikke+laget+for+%C3%A5+samarbeide.+S%C3%A5+hva+er+det+midt+i+mellom+som+gj%C3%B8r+at+ting+allikevel+ser+ut+til+%C3%A5+fungere%3F+Folk%21+Manuell+aktivitet+mellom+systemer+kan+og+B%C3%98R+automatiseres.+F%C3%A5+et+innblikk+i+hvorfor+og+hvordan+papirflytterne+kan+avl%C3%B8ses.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;3 12:45
+                      <a href="https://twitter.com/intent/follow?screen_name=anitaskylstad"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2FAnita10x15_ny_klippet-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal3&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal3&name=Papirflytting+eller+integrasjon%3F+La+systemene+snakke+sammen%21&caption=12%3A45+%23tdconf+2015&description=Jakten+p%C3%A5+det+perfekte+systemet+ender+ofte+opp+med+noe+midt+i+mellom.+L%C3%B8sninger+tilpasset+hvert+enkelt+fagomr%C3%A5de%2C+som+dekker+alle+behov+og+gj%C3%B8r+alle+forn%C3%B8yde%2C+men+ikke+laget+for+%C3%A5+samarbeide.+S%C3%A5+hva+er+det+midt+i+mellom+som+gj%C3%B8r+at+ting+allikevel+ser+ut+til+%C3%A5+fungere%3F+Folk%21+Manuell+aktivitet+mellom+systemer+kan+og+B%C3%98R+automatiseres.+F%C3%A5+et+innblikk+i+hvorfor+og+hvordan+papirflytterne+kan+avl%C3%B8ses.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1245_sal3">Sal&nbsp;3 - 12:45</a>
                     </p>
                 </div>
             </div>
@@ -646,7 +638,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;4</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -657,7 +649,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -666,10 +658,9 @@
                     <p>Bluetooth Low energy is one of the key technologies enabling IoT. A key difference between Bluetooth and other wireless standards is that it even defines application uses-cases (as adapted profiles). In this session we will look at the new Bluetooth Low energy API’s in Android L and learn how to use them to implement these adopted profiles as well as other gotchas with the API.</p>
                     <p>Vegar Westerlund is an embedded tester and developer working for Conceptos Consulting in Trondheim. He has developed on embedded Linux, done testing for ESA on Galileo (satellite navigation system) and is currently working for Nordic Semiconductor with Bluetooth low energy on their ARM based nRF51 series. He is also active in the Meetup community here in Trondheim and an organiser for XP meetup.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1245_sal4">link</a>  |
-                      <a href="https://twitter.com/intent/follow?screen_name=vegarwe">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2F2013-05-22_14-52-58_DSC_6319-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal4&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal4&name=Bluetooth+low+energy+on+Android&caption=12%3A45+%23tdconf+2015&description=Bluetooth+Low+energy+is+one+of+the+key+technologies+enabling+IoT.+A+key+difference+between+Bluetooth+and+other+wireless+standards+is+that+it+even+defines+application+uses-cases+%28as+adapted+profiles%29.+In+this+session+we+will+look+at+the+new+Bluetooth+Low+energy+API%E2%80%99s+in+Android+L+and+learn+how+to+use+them+to+implement+these+adopted+profiles+as+well+as+other+gotchas+with+the+API.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;4 12:45
+                      <a href="https://twitter.com/intent/follow?screen_name=vegarwe"><img class="program-social" src="s/twitter_grey.png">follow</a>  |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2F2013-05-22_14-52-58_DSC_6319-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal4&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal4&name=Bluetooth+low+energy+on+Android&caption=12%3A45+%23tdconf+2015&description=Bluetooth+Low+energy+is+one+of+the+key+technologies+enabling+IoT.+A+key+difference+between+Bluetooth+and+other+wireless+standards+is+that+it+even+defines+application+uses-cases+%28as+adapted+profiles%29.+In+this+session+we+will+look+at+the+new+Bluetooth+Low+energy+API%E2%80%99s+in+Android+L+and+learn+how+to+use+them+to+implement+these+adopted+profiles+as+well+as+other+gotchas+with+the+API.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1245_sal4">Sal&nbsp;4 - 12:45</a>
                     </p>
                 </div>
             </div>
@@ -679,7 +670,7 @@
                     <tr>
                         <th class="favourite">
                             <div>Sal&nbsp;5</div>
-                            <img class="fav-icon" src="http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png">
+                            <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">
                         </th>
                         <td class="expand">
                             <div class="program-title">
@@ -690,7 +681,7 @@
                             </div>
                         </td>
                         <td class="expand expand-icon">
-                            <img class="expand-icon" src="http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png">
+                            <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">
                         </td>
                     </tr>
                 </table>
@@ -699,9 +690,8 @@
                     <p>Smidige metoder har ført til at systemutvikling gjennomføres i små, selvstyrte team. Vi finner mange råd om hvordan arbeidet bør gjennomføres i smidige metoder, men hvordan rimer disse rådene med forskning på teamarbeid fra andre felt? I dette foredraget vil jeg vise en modell for teameffektivitet, hvilke faktorer scrum setter fokus på, og hva et team bør jobbe med i tillegg.</p>
                     <p>Torgeir arbeider med prosessforbedring og kunnskapsforvaltning i programvarebedrifter som seniorforsker i SINTEF. Spesielt har han fokusert på smidige utviklingsmetoder, teamarbeid i systemutvikling og bruk av intranettverktøy for læring mellom prosjekter. Han er medforfatter på boka “Praktisk prosessforbedring – en håndbok for IT-bedrifter” på Fagbokforlaget.</p>
                     <p class="program-footer">
-                      <a href="http://raiom.no/tdconf-test-program/#f1245_sal5">link</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Ftorgeir_dingsoyr_1200px-400x400.jpg&redirect_uri=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal5&link=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2F%23f1245_sal5&name=Hvordan+jobbe+bedre+som+team+i+smidig+utvikling%3F&caption=12%3A45+%23tdconf+2015&description=Smidige+metoder+har+f%C3%B8rt+til+at+systemutvikling+gjennomf%C3%B8res+i+sm%C3%A5%2C+selvstyrte+team.+Vi+finner+mange+r%C3%A5d+om+hvordan+arbeidet+b%C3%B8r+gjennomf%C3%B8res+i+smidige+metoder%2C+men+hvordan+rimer+disse+r%C3%A5dene+med+forskning+p%C3%A5+teamarbeid+fra+andre+felt%3F+I+dette+foredraget+vil+jeg+vise+en+modell+for+teameffektivitet%2C+hvilke+faktorer+scrum+setter+fokus+p%C3%A5%2C+og+hva+et+team+b%C3%B8r+jobbe+med+i+tillegg.&app_id=1620433374906724&display=page">share</a> |
-                      Sal&nbsp;5 12:45
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fraiom.no%2Ftdconf-test-program%2Fimg%2Ftorgeir_dingsoyr_1200px-400x400.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal5&link=http%3A%2F%2F2015.trondheimdc.no%2Ftest-program%2F%23f1245_sal5&name=Hvordan+jobbe+bedre+som+team+i+smidig+utvikling%3F&caption=12%3A45+%23tdconf+2015&description=Smidige+metoder+har+f%C3%B8rt+til+at+systemutvikling+gjennomf%C3%B8res+i+sm%C3%A5%2C+selvstyrte+team.+Vi+finner+mange+r%C3%A5d+om+hvordan+arbeidet+b%C3%B8r+gjennomf%C3%B8res+i+smidige+metoder%2C+men+hvordan+rimer+disse+r%C3%A5dene+med+forskning+p%C3%A5+teamarbeid+fra+andre+felt%3F+I+dette+foredraget+vil+jeg+vise+en+modell+for+teameffektivitet%2C+hvilke+faktorer+scrum+setter+fokus+p%C3%A5%2C+og+hva+et+team+b%C3%B8r+jobbe+med+i+tillegg.&app_id=1170433749639697&display=page"><img class="program-social" src="s/facebook.png">share</a> |
+                      <a href="http://2015.trondheimdc.no/test-program/#f1245_sal5">Sal&nbsp;5 - 12:45</a>
                     </p>
                 </div>
             </div>
@@ -726,7 +716,7 @@
                         var show_id = img.ancestor('div.program-post').get('id');
 
                         if (show_id in favourites && favourites[show_id]) {
-                            img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_star_white_24dp_1x.png');
+                            img.set('src', 's/ic_star_white_24dp_1x.png');
                         }
                     });
 
@@ -739,10 +729,10 @@
                     var img = e.currentTarget.one('img');
                     if (show_id in favourites && favourites[show_id]) {
                         favourites[show_id] = false;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_star_border_white_24dp_1x.png');
+                        img.set('src', 's/ic_star_border_white_24dp_1x.png');
                     } else {
                         favourites[show_id] = true;
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_star_white_24dp_1x.png');
+                        img.set('src', 's/ic_star_white_24dp_1x.png');
                     }
                     Y.Cookie.set('favourites', Y.JSON.stringify(favourites), { expires: new Date("January 12, 2025") });
                 });
@@ -755,10 +745,10 @@
 
                     if (hidden) {
                         talk.removeClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_less_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_less_white_24dp_1x.png');
                     } else {
                         talk.addClass('hidden');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_more_white_24dp_1x.png');
                     }
                 }
 
@@ -786,13 +776,13 @@
                     if (! e.currentTarget.hasClass('expanded')) {
                         e.currentTarget.addClass('expanded');
                         talks.removeClass('hidden');
-                        imgs.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_less_white_24dp_1x.png');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_less_white_24dp_2x.png');
+                        imgs.set('src', 's/ic_expand_less_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_less_white_24dp_2x.png');
                     } else {
                         e.currentTarget.removeClass('expanded');
                         talks.addClass('hidden');
-                        imgs.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_1x.png');
-                        img.set('src', 'http://raiom.no/tdconf-test-program/ico/ic_expand_more_white_24dp_2x.png');
+                        imgs.set('src', 's/ic_expand_more_white_24dp_1x.png');
+                        img.set('src', 's/ic_expand_more_white_24dp_2x.png');
                     }
                 });
             });

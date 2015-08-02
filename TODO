@@ -1,11 +1,11 @@
 TODO:
-- Expand from url
 - Test multiple 'chapters' in input .csv (about and abstract), should get surrounded by <p>
 - 'caption' for Facebook links
-* Nedover kebab
-* Print: Med sjerner
-* Print: Ekspander alt
-* Bigger box for Lunch break?
+
+* (void) Print: Med sjerner
+* (void) Print: Ekspander alt
+* (void) Bigger box for Lunch break?
+* (void) Nedover kebab
 
 Done
 - (done) store cookie
@@ -17,4 +17,5 @@ Done
 * (done) Padding rundt bilder
 * (done) Change pointer when hovering h3 h5
 - (done) Expand all
-
+- (done) Expand from url
+- (done) Switch to 2014.trondheimdc.no Facebook app
