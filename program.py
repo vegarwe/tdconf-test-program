@@ -20,12 +20,14 @@ def write_file(file):
         for line in f.readlines():
             write_raw(line)
 
-def main():
+def program_page():
     write_raw(header)
     write_file("program.css")
 
     write_raw('\n')
-    write_line('<h2>Program 2015</h2>')
+    write_line('<h2>Program 2014</h2>')
+    write_raw('\n')
+    write_line('<h5>***THIS PAGE IS JUST FOR TESTING PURPOSES. STAY TUNED FOR THE REAL PROGRAM***</h5>')
     write_raw('\n')
     write_line('<table class="program-top"><tr>')
     write_line('<td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>')
@@ -173,4 +175,4 @@ footer = """
 """
 
 if __name__ == "__main__":
-    main()
+    speaker_page()
