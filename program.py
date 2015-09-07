@@ -6,37 +6,37 @@ import urllib
 
 base_url = 'http://2015.trondheimdc.no/test-program'
 
-
-f = open('index.html', 'w')
-def write_raw(raw):
+def write_raw(f, raw):
     f.write(raw)
 
-def write_line(line):
+def write_line(f, line):
     indent = "        "
-    write_raw('%s%s\n' % (indent, line))
+    write_raw(f, '%s%s\n' % (indent, line))
 
-def write_file(file):
-    with open(file) as f:
-        for line in f.readlines():
-            write_raw(line)
+def write_file(f, file):
+    with open(file) as i:
+        for line in i.readlines():
+            write_raw(f, line)
 
 def program_page():
-    write_raw(header)
-    write_file("program.css")
+    f = open('index.html', 'w')
 
-    write_raw('\n')
-    write_line('<h2>Program 2014</h2>')
-    write_raw('\n')
-    write_line('<h5>***THIS PAGE IS JUST FOR TESTING PURPOSES. STAY TUNED FOR THE REAL PROGRAM***</h5>')
-    write_raw('\n')
-    write_line('<table class="program-top"><tr>')
-    write_line('<td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>')
-    write_line('<td class="expand-all"><img src="s/ic_expand_more_white_24dp_2x.png"></td>')
-    write_line('</tr></table>')
+    write_raw( f, header)
+    write_file(f, "program.css")
+
+    write_raw( f, '\n')
+    write_line(f, '<h2>Program 2014</h2>')
+    write_raw( f, '\n')
+    write_line(f, '<h5>***THIS PAGE IS JUST FOR TESTING PURPOSES. STAY TUNED FOR THE REAL PROGRAM***</h5>')
+    write_raw( f, '\n')
+    write_line(f, '<table class="program-top"><tr>')
+    write_line(f, '<td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>')
+    write_line(f, '<td class="expand-all"><img src="s/ic_expand_more_white_24dp_2x.png"></td>')
+    write_line(f, '</tr></table>')
 
     for show_time in show_times:
-        write_line('<section class="program-time %s">' % show_time[4])
-        write_line('    <h4  class="program-time">%s - %s %s</h4>' % (show_time[1], show_time[2], show_time[3]))
+        write_line(f, '<section class="program-time %s">' % show_time[4])
+        write_line(f, '    <h4  class="program-time">%s - %s %s</h4>' % (show_time[1], show_time[2], show_time[3]))
 
         for room in xrange(1,6):
             for program in programs:
@@ -57,51 +57,51 @@ def program_page():
                     })
 
 
-                write_raw('\n')
-                write_line('    <div id="f%s" class="program-post">' % id)
-                write_line('        <table class="program-header">')
-                write_line('            <tr>')
-                write_line('                <th class="favourite">')
-                write_line('                    <div>Sal&nbsp;%s</div>' % room)
-                write_line('                    <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">')
-                write_line('                </th>')
-                write_line('                <td class="expand">')
-                write_line('                    <div class="program-title">')
-                write_line('                        %s' % (program['title']))
-                write_line('                    </div>')
-                write_line('                    <div class="post-author">')
-                write_line('                        %s' % (program['author']))
-                write_line('                    </div>')
-                write_line('                </td>')
-                write_line('                <td class="expand expand-icon">')
-                write_line('                    <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">')
-                write_line('                </td>')
-                write_line('            </tr>')
-                write_line('        </table>')
-                write_line('        <div class="program-talk hidden">')
-                write_line('            <img class="program-img" src="%s">' % program['image'])
+                write_raw( f, '\n')
+                write_line(f, '    <div id="f%s" class="program-post">' % id)
+                write_line(f, '        <table class="program-header">')
+                write_line(f, '            <tr>')
+                write_line(f, '                <th class="favourite">')
+                write_line(f, '                    <div>Sal&nbsp;%s</div>' % room)
+                write_line(f, '                    <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">')
+                write_line(f, '                </th>')
+                write_line(f, '                <td class="expand">')
+                write_line(f, '                    <div class="program-title">')
+                write_line(f, '                        %s' % (program['title']))
+                write_line(f, '                    </div>')
+                write_line(f, '                    <div class="post-author">')
+                write_line(f, '                        %s' % (program['author']))
+                write_line(f, '                    </div>')
+                write_line(f, '                </td>')
+                write_line(f, '                <td class="expand expand-icon">')
+                write_line(f, '                    <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">')
+                write_line(f, '                </td>')
+                write_line(f, '            </tr>')
+                write_line(f, '        </table>')
+                write_line(f, '        <div class="program-talk hidden">')
+                write_line(f, '            <img class="program-img" src="%s">' % program['image'])
                 if program['abstract'] != '':
-                    write_line('            %s' % ''.join(['<p>%s</p>' % i for i in program['abstract'].split('\n')]))
+                    write_line(f, '            %s' % ''.join(['<p>%s</p>' % i for i in program['abstract'].split('\n')]))
                 else:
                     print 'No abstract for %s' % program['title']
                 if program['about'] != '':
-                    write_line('            %s' % ''.join(['<p>%s</p>' % i for i in program['about'].split('\n')]))
+                    write_line(f, '            %s' % ''.join(['<p>%s</p>' % i for i in program['about'].split('\n')]))
                 else:
                     print 'No about for %s' % program['title']
-                write_line('            <p class="program-footer">')
+                write_line(f, '            <p class="program-footer">')
                 if program['twitter'] != '':
-                    write_line('              <a href="https://twitter.com/intent/follow?screen_name=%s"><img class="program-social" src="s/twitter_grey.png">follow</a>  |' % program['twitter'])
-                write_line('              <a href="%s"><img class="program-social" src="s/facebook.png">share</a> |' % (face_url))
-                write_line('              <a href="%s">Sal&nbsp;%s - %s</a>' % (post_url, room, show_time[1]))
-                write_line('            </p>')
-                write_line('        </div>')
-                write_line('    </div>')
+                    write_line(f, '              <a href="https://twitter.com/intent/follow?screen_name=%s"><img class="program-social" src="s/twitter_grey.png">follow</a>  |' % program['twitter'])
+                write_line(f, '              <a href="%s"><img class="program-social" src="s/facebook.png">share</a> |' % (face_url))
+                write_line(f, '              <a href="%s">Sal&nbsp;%s - %s</a>' % (post_url, room, show_time[1]))
+                write_line(f, '            </p>')
+                write_line(f, '        </div>')
+                write_line(f, '    </div>')
 
-        write_line('</section>')
-        write_raw('\n\n')
+        write_line(f, '</section>')
+        write_raw( f, '\n\n')
 
-    write_file("program.js")
-    write_raw(footer)
+    write_file(f, "program.js")
+    write_raw( f, footer)
 
 show_times = [
         ['0800', '08:00', '09:00', 'Registrering',  'sep'],
@@ -175,4 +175,4 @@ footer = """
 """
 
 if __name__ == "__main__":
-    speaker_page()
+    program_page()
