@@ -1,0 +1,33 @@
+
+        <style>
+            #speaker-list {
+            }
+
+            .speaker-list a {
+                width:  250px;
+                height: 120px;
+                float:  left;
+                overflow: hidden;
+                color: white;
+            }
+
+            .speaker-list img {
+                width:  96px;
+                height: 96px;
+                float: left;
+                margin-right: 10px;
+            }
+
+            .speaker-list h5 {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .speaker-list span {
+                font-size: 12px;
+                line-height: 1.2;
+                padding: 0px;
+                margin: 0px;
+            }
+
+        </style>
