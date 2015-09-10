@@ -1,7 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import os
 import sys
+import json
 import urllib
 
 base_url = 'http://2015.trondheimdc.no/test-program'
@@ -18,10 +20,55 @@ def write_file(f, file):
         for line in i.readlines():
             write_raw(f, line)
 
+def speaker_page():
+    f = open('speakers.html', 'w')
+
+    if os.path.isfile('header.html.stub'):
+        write_file(f, 'header.html.stub')
+    else:
+        write_raw( f, header)
+
+    write_file(f, "speakers.css")
+
+    speakers = programs[:]
+    for s in speakers:
+        short_title = ''
+        for word in s['title'].split(" "):
+            if len("%s %s" % (short_title, word)) > 45:
+                short_title += '...'
+                break
+            short_title += ' ' + word
+
+        s['short_title'] = short_title
+
+    write_raw( f, header)
+    write_line(f, '<script type="text/javascript">')
+    write_line(f, '  var speakers = %s' % json.dumps(speakers))
+    write_line(f, '</script>')
+
+    write_raw( f, '\n')
+    write_line(f, '<h2>Speakers 2014</h2>')
+    write_raw( f, '\n')
+    write_line(f, '<h5>***THIS PAGE IS JUST FOR TESTING PURPOSES. STAY TUNED FOR THE REAL PROGRAM***</h5>')
+    write_raw( f, '\n')
+
+    write_line(f, '<div id="speaker-list" class="speaker-list clearfix"></div>')
+
+    write_file(f, "speakers.js")
+
+    if os.path.isfile('footer.html.stub'):
+        write_file(f, 'footer.html.stub')
+    else:
+        write_raw( f, footer)
+
 def program_page():
     f = open('index.html', 'w')
 
-    write_raw( f, header)
+    if os.path.isfile('header.html.stub'):
+        write_file(f, 'header.html.stub')
+    else:
+        write_raw( f, header)
+
     write_file(f, "program.css")
 
     write_raw( f, '\n')
@@ -101,7 +148,11 @@ def program_page():
         write_raw( f, '\n\n')
 
     write_file(f, "program.js")
-    write_raw( f, footer)
+
+    if os.path.isfile('footer.html.stub'):
+        write_file(f, 'footer.html.stub')
+    else:
+        write_raw( f, footer)
 
 show_times = [
         ['0800', '08:00', '09:00', 'Registrering',  'sep'],
@@ -176,3 +227,4 @@ footer = """
 
 if __name__ == "__main__":
     program_page()
+    speaker_page()
