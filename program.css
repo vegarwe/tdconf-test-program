@@ -63,7 +63,9 @@
                 margin-left: 16px;
             }
             img.program-img {
+                /*
                 height: 156px;
+                */
                 width:  156px;
                 float: left;
                 margin: 0 4px 4px 0;
