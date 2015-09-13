@@ -29,7 +29,7 @@
                     for (var i = 0; i < speakers.length; i++) {
                         var s = speakers[i];
                         var entity = "";
-                        entity += "<a>";
+                        entity += "<a href='" + s.link + "'>";
                         entity += "  <img width='180px' src='" + s.image + "'>";
                         entity += "  <h5>" + s.author + "</h5>";
                         entity += "  <span>" + s.short_title + "</span>";
