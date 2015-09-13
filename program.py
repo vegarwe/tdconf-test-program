@@ -7,11 +7,11 @@ import sys
 import json
 import urllib
 
-base_url = 'http://2015.trondheimdc.no/test-program'
+base_url = 'http://2015.trondheimdc.no/program'
 
-def read_input():
+def read_input(input_file):
     input = []
-    with open('kjoreplan.csv', 'rb') as csvfile:
+    with open(input_file, 'rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for row in reader:
             if row[0] == 'Vurdering': continue
@@ -48,6 +48,7 @@ def speaker_page(programs):
         write_file(f, 'header.html.stub')
     else:
         write_raw( f, header)
+    write_line(f, '        <!-- Copy from here...... -->')
 
     write_file(f, "speakers.css")
 
@@ -61,22 +62,25 @@ def speaker_page(programs):
             short_title += ' ' + word
 
         s['short_title'] = short_title
+        s['link'] = '%s/#f%s' % (base_url, s['id'])
+        print s['image']
+        if s['image'] != '':
+            img = '.'.join(s['image'].split('/')[-1].split(".")[:-1])
+            s['image'] = "http://static.trondheimdc.no/uploads/2015/cropped/" + img + "_cropped.jpg"
 
-    write_raw( f, header)
     write_line(f, '<script type="text/javascript">')
     write_line(f, '  var speakers = %s' % json.dumps(speakers))
     write_line(f, '</script>')
 
     write_raw( f, '\n')
-    write_line(f, '<h2>Speakers 2014</h2>')
-    write_raw( f, '\n')
-    write_line(f, '<h5>***THIS PAGE IS JUST FOR TESTING PURPOSES. STAY TUNED FOR THE REAL PROGRAM***</h5>')
+    write_line(f, '<h2>Speakers 2015</h2>')
     write_raw( f, '\n')
 
     write_line(f, '<div id="speaker-list" class="speaker-list clearfix"></div>')
 
     write_file(f, "speakers.js")
 
+    write_line(f, '        <!-- To here.............. -->')
     if os.path.isfile('footer.html.stub'):
         write_file(f, 'footer.html.stub')
     else:
@@ -89,17 +93,16 @@ def program_page(programs):
         write_file(f, 'header.html.stub')
     else:
         write_raw( f, header)
+    write_line(f, '        <!-- Copy from here...... -->')
 
     write_file(f, "program.css")
 
     write_raw( f, '\n')
-    write_line(f, '<h2>Program 2014</h2>')
-    write_raw( f, '\n')
-    write_line(f, '<h5>***THIS PAGE IS JUST FOR TESTING PURPOSES. STAY TUNED FOR THE REAL PROGRAM***</h5>')
+    write_line(f, '<h2>Program 2015</h2>')
     write_raw( f, '\n')
     write_line(f, '<table class="program-top"><tr>')
     write_line(f, '<td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>')
-    write_line(f, '<td class="expand-all"><img src="s/ic_expand_more_white_24dp_2x.png"></td>')
+    write_line(f, '<td class="expand-all"><img src="http://static.trondheimdc.no/uploads/2015/s/ic_expand_more_white_24dp_2x.png"></td>')
     write_line(f, '</tr></table>')
 
     for show_time in show_times:
@@ -142,7 +145,7 @@ def program_page(programs):
 
                 twitter_tag = ''
                 if program['twitter'] != '':
-                    twitter_tag = '<a href="https://twitter.com/intent/follow?screen_name=%s"><img class="program-social" src="s/twitter_grey.png">follow</a>  |' % program['twitter']
+                    twitter_tag = '<a href="https://twitter.com/intent/follow?screen_name=%s"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |' % program['twitter']
 
 
                 write_raw( f, '\n')
@@ -151,7 +154,7 @@ def program_page(programs):
                 write_line(f, '            <tr>')
                 write_line(f, '                <th class="favourite">')
                 write_line(f, '                    <div>Sal&nbsp;%s</div>' % room)
-                write_line(f, '                    <img class="fav-icon" src="s/ic_star_border_white_24dp_1x.png">')
+                write_line(f, '                    <img class="fav-icon" src="http://static.trondheimdc.no/uploads/2015/s/ic_star_border_white_24dp_1x.png">')
                 write_line(f, '                </th>')
                 write_line(f, '                <td class="expand">')
                 write_line(f, '                    <div class="program-title">')
@@ -162,7 +165,7 @@ def program_page(programs):
                 write_line(f, '                    </div>')
                 write_line(f, '                </td>')
                 write_line(f, '                <td class="expand expand-icon">')
-                write_line(f, '                    <img class="expand-icon" src="s/ic_expand_more_white_24dp_1x.png">')
+                write_line(f, '                    <img class="expand-icon" src="http://static.trondheimdc.no/uploads/2015/s/ic_expand_more_white_24dp_1x.png">')
                 write_line(f, '                </td>')
                 write_line(f, '            </tr>')
                 write_line(f, '        </table>')
@@ -172,7 +175,7 @@ def program_page(programs):
                 write_line(f, '            %s' % about_tag)
                 write_line(f, '            <p class="program-footer">')
                 write_line(f, '              %s' % twitter_tag)
-                write_line(f, '              <a href="%s"><img class="program-social" src="s/facebook.png">share</a> |' % (face_url))
+                write_line(f, '              <a href="%s"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |' % (face_url))
                 write_line(f, '              <a href="%s">Sal&nbsp;%s - %s</a>' % (post_url, room, show_time[1]))
                 write_line(f, '            </p>')
                 write_line(f, '        </div>')
@@ -183,6 +186,7 @@ def program_page(programs):
 
     write_file(f, "program.js")
 
+    write_line(f, '        <!-- To here.............. -->')
     if os.path.isfile('footer.html.stub'):
         write_file(f, 'footer.html.stub')
     else:
@@ -209,7 +213,7 @@ show_times = [
         ['1615', '16:15', '16:30', 'Pause',          ''],
         ['1630', '16:30', '17:00', '',               ''],
         ['1700', '17:00', '17:15', 'Pause',          ''],
-        ['1715', '17:15', '18:05', 'Keynote',        ''],
+        ['1715', '17:15', '18:05', 'Closing session',''],
         ['1805', '18:05', '18:15', 'Outro',          ''],
         ['1815', '18:15', '01:00', 'TDConf party',   ''],
     ]
@@ -254,7 +258,7 @@ footer = """
 """
 
 if __name__ == "__main__":
-    input = read_input()
+    input = read_input('kjoreplan_2015.csv')
     program_page(input)
     speaker_page(input)
     #import kjoreplan_sample
