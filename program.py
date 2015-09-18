@@ -18,12 +18,12 @@ def read_input(input_file):
             if row[2] == '': continue
             input.append({
                 'id': row[2],
-                'title': row[8],
-                'author': row[5],
-                'twitter': row[18],
-                'image': row[12],
-                'abstract': row[9],
-                'about': row[10]
+                'title': row[9],
+                'author': row[6],
+                'twitter': row[19],
+                'image': row[13],
+                'abstract': row[10],
+                'about': row[11]
             })
     #print repr(input)
 
