@@ -50,6 +50,9 @@
                 padding: 4px;
                 margin-bottom: 20px;
             }
+            div.odd {
+                background-color: #444;
+            }
             h4.program-time {
                 padding: 14px 14px 14px 2px;
                 margin: 0;
@@ -62,12 +65,15 @@
             }
             th.favourite {
                 width: 28px;
+                color: #888;
             }
             th.favourite span {
                 font-size: 0.8em;
             }
             .program-title {
+                /*
                 color: #00ff80;
+                */
                 margin:  0 0 0 5px;
                 padding: 0 0 0 5px;
                 cursor: pointer;
@@ -84,6 +90,7 @@
                 padding: 0 0 0 5px;
                 cursor: pointer;
                 cursor: hand;
+                color: #888;
 
                 font-family: proxima-nova;
                 font-size: 16px;
@@ -132,7 +139,7 @@
         <section class="program-time ">
             <h4  class="program-time">09:10 - 10:00 Keynote</h4>
 
-            <div id="f0910_sal1" class="program-post">
+            <div id="f0910_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -174,7 +181,7 @@
         <section class="program-time ">
             <h4  class="program-time">10:15 - 10:45 </h4>
 
-            <div id="f1015_sal1" class="program-post">
+            <div id="f1015_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -206,7 +213,7 @@
                 </div>
             </div>
 
-            <div id="f1015_sal2" class="program-post">
+            <div id="f1015_sal2" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -238,7 +245,7 @@
                 </div>
             </div>
 
-            <div id="f1015_sal3" class="program-post">
+            <div id="f1015_sal3" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -270,7 +277,7 @@
                 </div>
             </div>
 
-            <div id="f1015_sal4" class="program-post">
+            <div id="f1015_sal4" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -302,7 +309,7 @@
                 </div>
             </div>
 
-            <div id="f1015_sal5" class="program-post">
+            <div id="f1015_sal5" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -344,7 +351,7 @@
         <section class="program-time ">
             <h4  class="program-time">11:00 - 11:30 </h4>
 
-            <div id="f1100_sal1" class="program-post">
+            <div id="f1100_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -376,7 +383,7 @@
                 </div>
             </div>
 
-            <div id="f1100_sal2" class="program-post">
+            <div id="f1100_sal2" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -408,7 +415,7 @@
                 </div>
             </div>
 
-            <div id="f1100_sal3" class="program-post">
+            <div id="f1100_sal3" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -440,7 +447,7 @@
                 </div>
             </div>
 
-            <div id="f1100_sal4" class="program-post">
+            <div id="f1100_sal4" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -472,7 +479,7 @@
                 </div>
             </div>
 
-            <div id="f1100_sal5" class="program-post">
+            <div id="f1100_sal5" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -494,11 +501,11 @@
                 </table>
                 <div class="program-talk hidden">
                     <img class="program-img" src="http://static.trondheimdc.no/uploads/2015/09/TrondSmaavik_JAbrahamsen.jpg">
-                    <p>Statens vegvesen vedlikeholder mengder med åpne lokasjonsbestemte data. Vi vil gi en oversikt over de ulike datasettene, men også dykke inn et utvalg av datasett. </p><p></p><p>Høsten 2015 lanserer Statens vegvesen en ny webbasert kartløsning. Vi skal ta for oss løsningen, utfordringene og hvilke datasett som brukes.</p><p></p><p>Denne presentasjonen er beregnet på utviklere og alle som er interesserte i åpne data.</p>
+                    <p>Statens vegvesen vedlikeholder mengder med åpne lokasjonsbestemte data. Vi vil gi en oversikt over de ulike datasettene, men også dykke inn et utvalg av datasett. </p><p></p><p>Våren 2016 lanserer Statens vegvesen en ny webbasert kartløsning. Vi skal ta for oss løsningen, utfordringene og hvilke datasett som brukes.</p><p></p><p>Denne presentasjonen er beregnet på utviklere og alle som er interesserte i åpne data.</p>
                     <p>Trond Smaavik og Jørgen Abrahamsen er erfarne, entusiastiske og engasjerte systemutviklere som brenner for kvalitet i håndtverket de utfører daglig.</p>
                     <p class="program-footer">
                       <a href="https://twitter.com/intent/follow?screen_name=@jorabra @trondsmaavik"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2F09%2FTrondSmaavik_JAbrahamsen.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1100_sal5&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1100_sal5&name=Kartbasert+Trafikkinformasjon&caption=11%3A00+%23tdconf+2015&description=Statens+vegvesen+vedlikeholder+mengder+med+%C3%A5pne+lokasjonsbestemte+data.+Vi+vil+gi+en+oversikt+over+de+ulike+datasettene%2C+men+ogs%C3%A5+dykke+inn+et+utvalg+av+datasett.+%0A%0AH%C3%B8sten+2015+lanserer+Statens+vegvesen+en+ny+webbasert+kartl%C3%B8sning.+Vi+skal+ta+for+oss+l%C3%B8sningen%2C+utfordringene+og+hvilke+datasett+som+brukes.%0A%0ADenne+presentasjonen+er+beregnet+p%C3%A5+utviklere+og+alle+som+er+interesserte+i+%C3%A5pne+data.&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2F09%2FTrondSmaavik_JAbrahamsen.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1100_sal5&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1100_sal5&name=Kartbasert+Trafikkinformasjon&caption=11%3A00+%23tdconf+2015&description=Statens+vegvesen+vedlikeholder+mengder+med+%C3%A5pne+lokasjonsbestemte+data.+Vi+vil+gi+en+oversikt+over+de+ulike+datasettene%2C+men+ogs%C3%A5+dykke+inn+et+utvalg+av+datasett.+%0A%0AV%C3%A5ren+2016+lanserer+Statens+vegvesen+en+ny+webbasert+kartl%C3%B8sning.+Vi+skal+ta+for+oss+l%C3%B8sningen%2C+utfordringene+og+hvilke+datasett+som+brukes.%0A%0ADenne+presentasjonen+er+beregnet+p%C3%A5+utviklere+og+alle+som+er+interesserte+i+%C3%A5pne+data.&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
                       <a href="#f1100_sal5">Sal&nbsp;5 - 11:00</a>
                     </p>
                 </div>
@@ -514,7 +521,7 @@
         <section class="program-time ">
             <h4  class="program-time">11:45 - 12:15 </h4>
 
-            <div id="f1145_sal1" class="program-post">
+            <div id="f1145_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -546,7 +553,7 @@
                 </div>
             </div>
 
-            <div id="f1145_sal2" class="program-post">
+            <div id="f1145_sal2" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -578,7 +585,7 @@
                 </div>
             </div>
 
-            <div id="f1145_sal3" class="program-post">
+            <div id="f1145_sal3" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -610,7 +617,7 @@
                 </div>
             </div>
 
-            <div id="f1145_sal4" class="program-post">
+            <div id="f1145_sal4" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -632,17 +639,17 @@
                 </table>
                 <div class="program-talk hidden">
                     <img class="program-img" src="http://static.trondheimdc.no/uploads/vfb/2015/05/pab-avatar.320x320px.jpg">
-                    <p>Hvordan èn utvikler startet noe som ble til et globalt skifte av utviklings metodik i Atmel. </p><p></p><p>Med eksempler på hvordan kontinuerlig utvikling, integrasjon, leveranse og feedback  (Continuos Everything) har blitt gjort i et globalt selskap som Atmel. </p><p></p>
+                    <p>Hvordan èn utvikler startet noe som ble til et globalt skifte av utviklings metodikk i Atmel. </p><p></p><p>Med eksempler på hvordan kontinuerlig utvikling, integrasjon, leveranse og feedback  (Continuos Everything) har blitt gjort i et globalt selskap som Atmel. </p><p></p>
                     <p>Lidenskaplig opptatt av programvareutvikling som håndverk (Software Craftsmanship). 30 års erfaring fra utvkiling av elektronikk og programvare innen transport, bank, telekom, mobil, rf-elektronikk og mikro-kontrollere. </p>
                     <p class="program-footer">
                       <a href="https://twitter.com/intent/follow?screen_name=@pablaasmo"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2Fvfb%2F2015%2F05%2Fpab-avatar.320x320px.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1145_sal4&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1145_sal4&name=Continuous+Everything%27+-+fra+koding+til+leveranse+implementert+i+et+globalt+firma&caption=11%3A45+%23tdconf+2015&description=Hvordan+%C3%A8n+utvikler+startet+noe+som+ble+til+et+globalt+skifte+av+utviklings+metodik+i+Atmel.+%0A%0AMed+eksempler+p%C3%A5+hvordan+kontinuerlig+utvikling%2C+integrasjon%2C+leveranse+og+feedback++%28Continuos+Everything%29+har+blitt+gjort+i+et+globalt+selskap+som+Atmel.+%0A&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2Fvfb%2F2015%2F05%2Fpab-avatar.320x320px.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1145_sal4&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1145_sal4&name=Continuous+Everything%27+-+fra+koding+til+leveranse+implementert+i+et+globalt+firma&caption=11%3A45+%23tdconf+2015&description=Hvordan+%C3%A8n+utvikler+startet+noe+som+ble+til+et+globalt+skifte+av+utviklings+metodikk+i+Atmel.+%0A%0AMed+eksempler+p%C3%A5+hvordan+kontinuerlig+utvikling%2C+integrasjon%2C+leveranse+og+feedback++%28Continuos+Everything%29+har+blitt+gjort+i+et+globalt+selskap+som+Atmel.+%0A&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
                       <a href="#f1145_sal4">Sal&nbsp;4 - 11:45</a>
                     </p>
                 </div>
             </div>
 
-            <div id="f1145_sal5" class="program-post">
+            <div id="f1145_sal5" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -684,7 +691,7 @@
         <section class="program-time ">
             <h4  class="program-time">13:15 - 14:00 </h4>
 
-            <div id="f1315_sal1" class="program-post">
+            <div id="f1315_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -726,7 +733,7 @@
         <section class="program-time ">
             <h4  class="program-time">14:15 - 14:45 </h4>
 
-            <div id="f1415_sal1" class="program-post">
+            <div id="f1415_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -758,7 +765,7 @@
                 </div>
             </div>
 
-            <div id="f1415_sal2" class="program-post">
+            <div id="f1415_sal2" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -790,7 +797,7 @@
                 </div>
             </div>
 
-            <div id="f1415_sal3" class="program-post">
+            <div id="f1415_sal3" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -822,7 +829,7 @@
                 </div>
             </div>
 
-            <div id="f1415_sal4" class="program-post">
+            <div id="f1415_sal4" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -854,7 +861,7 @@
                 </div>
             </div>
 
-            <div id="f1415_sal5" class="program-post">
+            <div id="f1415_sal5" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -896,7 +903,7 @@
         <section class="program-time ">
             <h4  class="program-time">15:00 - 15:30 </h4>
 
-            <div id="f1500_sal1" class="program-post">
+            <div id="f1500_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -928,7 +935,7 @@
                 </div>
             </div>
 
-            <div id="f1500_sal2" class="program-post">
+            <div id="f1500_sal2" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -960,7 +967,7 @@
                 </div>
             </div>
 
-            <div id="f1500_sal3" class="program-post">
+            <div id="f1500_sal3" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -969,7 +976,7 @@
                         </th>
                         <td class="expand">
                             <div class="program-title">
-                                Agile/decision making
+                                101 Cynefin, or new ways of understanding users requirements - reducing errors by getting it right up front
                             </div>
                             <div class="post-author">
                                 Dave Snowden
@@ -981,18 +988,18 @@
                     </tr>
                 </table>
                 <div class="program-talk hidden">
-                    
-                    
-                    
+                    <img class="program-img" src="http://static.trondheimdc.no/uploads/2015/cropped/dave-snowden.jpg">
+                    <p>Cynefin is a popular framework within the Agile community, used to help determine the type of method and decision that should be used in development.  Recent developments involve radical new approaches to understanding unarticulated user needs to reduce risk and increase the adoption of new technologies and capabilities.  By getting more right before people even articulate a formal need we can radically increase satisfaction and reduce the cost of errors and misunderstandings downstream</p>
+                    <p>Dave Snowden - Cognitive Edge</p><p>Founder and Chief Scientific Officer</p><p>Dave Snowden is the founder and chief scientific officer of Cognitive Edge. His work is international in nature and covers government and industry looking at complex issues relating to strategy, organisational decision making and decision making. He has pioneered a science based approach to organisations drawing on anthropology, neuroscience and complex adaptive systems theory. He is a popular and passionate keynote speaker on a range of subjects, and is well known for his pragmatic cynicism and iconoclastic style.</p><p></p>
                     <p class="program-footer">
                       <a href="https://twitter.com/intent/follow?screen_name=snowded"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1500_sal3&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1500_sal3&name=Agile%2Fdecision+making&caption=15%3A00+%23tdconf+2015&description=&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2Fcropped%2Fdave-snowden.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1500_sal3&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1500_sal3&name=101+Cynefin%2C+or+new+ways+of+understanding+users+requirements+-+reducing+errors+by+getting+it+right+up+front&caption=15%3A00+%23tdconf+2015&description=Cynefin+is+a+popular+framework+within+the+Agile+community%2C+used+to+help+determine+the+type+of+method+and+decision+that+should+be+used+in+development.++Recent+developments+involve+radical+new+approaches+to+understanding+unarticulated+user+needs+to+reduce+risk+and+increase+the+adoption+of+new+technologies+and+capabilities.++By+getting+more+right+before+people+even+articulate+a+formal+need+we+can+radically+increase+satisfaction+and+reduce+the+cost+of+errors+and+misunderstandings+downstream&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
                       <a href="#f1500_sal3">Sal&nbsp;3 - 15:00</a>
                     </p>
                 </div>
             </div>
 
-            <div id="f1500_sal4" class="program-post">
+            <div id="f1500_sal4" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1024,7 +1031,7 @@
                 </div>
             </div>
 
-            <div id="f1500_sal5" class="program-post">
+            <div id="f1500_sal5" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1066,7 +1073,7 @@
         <section class="program-time ">
             <h4  class="program-time">15:45 - 16:15 </h4>
 
-            <div id="f1545_sal1" class="program-post">
+            <div id="f1545_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1098,7 +1105,7 @@
                 </div>
             </div>
 
-            <div id="f1545_sal2" class="program-post">
+            <div id="f1545_sal2" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1130,7 +1137,7 @@
                 </div>
             </div>
 
-            <div id="f1545_sal3" class="program-post">
+            <div id="f1545_sal3" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1162,7 +1169,7 @@
                 </div>
             </div>
 
-            <div id="f1545_sal4" class="program-post">
+            <div id="f1545_sal4" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1194,7 +1201,7 @@
                 </div>
             </div>
 
-            <div id="f1545_sal5" class="program-post">
+            <div id="f1545_sal5" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1236,7 +1243,7 @@
         <section class="program-time ">
             <h4  class="program-time">16:30 - 17:00 </h4>
 
-            <div id="f1630_sal1" class="program-post">
+            <div id="f1630_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1268,7 +1275,7 @@
                 </div>
             </div>
 
-            <div id="f1630_sal2" class="program-post">
+            <div id="f1630_sal2" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1277,7 +1284,7 @@
                         </th>
                         <td class="expand">
                             <div class="program-title">
-                                Droneshow
+                                Fra skyen og tilbake - quadkopter med åpen kildekode
                             </div>
                             <div class="post-author">
                                 Henning Pedersen
@@ -1290,17 +1297,17 @@
                 </table>
                 <div class="program-talk hidden">
                     <img class="program-img" src="http://static.trondheimdc.no/uploads/2015/09/henning_mekker.jpg">
-                    
+                    <p>Dronebygger Henning Pedersen forteller litt om hvordan åpen kildekode utgjør hjertet små ubemannede luftfarkoster. Han viser hvordan et enkelt selvbygget quadkopter kan konfigureres gjennom Google Chrome.</p>
                     <p>Henning er dronedesigner, operatør og kursholder på heltid. Han er blant annet ansvarlig for Droneshow og Megakopteret, en av verdens største multikoptere. Han driver også nettbutikken Makeadrone.net.</p>
                     <p class="program-footer">
                       <a href="https://twitter.com/intent/follow?screen_name=@Makeadrone"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2F09%2Fhenning_mekker.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1630_sal2&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1630_sal2&name=Droneshow&caption=16%3A30+%23tdconf+2015&description=&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2F09%2Fhenning_mekker.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1630_sal2&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1630_sal2&name=Fra+skyen+og+tilbake+-+quadkopter+med+%C3%A5pen+kildekode&caption=16%3A30+%23tdconf+2015&description=Dronebygger+Henning+Pedersen+forteller+litt+om+hvordan+%C3%A5pen+kildekode+utgj%C3%B8r+hjertet+sm%C3%A5+ubemannede+luftfarkoster.+Han+viser+hvordan+et+enkelt+selvbygget+quadkopter+kan+konfigureres+gjennom+Google+Chrome.&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
                       <a href="#f1630_sal2">Sal&nbsp;2 - 16:30</a>
                     </p>
                 </div>
             </div>
 
-            <div id="f1630_sal3" class="program-post">
+            <div id="f1630_sal3" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1332,7 +1339,7 @@
                 </div>
             </div>
 
-            <div id="f1630_sal4" class="program-post">
+            <div id="f1630_sal4" class="program-post odd">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1364,7 +1371,7 @@
                 </div>
             </div>
 
-            <div id="f1630_sal5" class="program-post">
+            <div id="f1630_sal5" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
@@ -1387,7 +1394,7 @@
                 <div class="program-talk hidden">
                     <img class="program-img" src="http://static.trondheimdc.no/uploads/2015/09/Tommy_Dahlen_bilde.png">
                     <p>Du får en praktisk oversikt over deler av IPR-systemet av særlig betydning for utviklere. Gjennomgangen vil bli illustrert med eksempler og etablering av noen kjøreregler for en konfliktfri hverdag."</p>
-                    <p>Tommy Dahlen har arbeidet som advokat for oppstartsselskaper og kunnskapsbedrifter i 18 år og har spesialisert sin virksomhet rundt forvaltning av IPR. Dahlen er også ansatt som universitetslektor II ved NTNU School of Entrepreneurship og er leder for Intellectual Property Institute of Norway (IPiN), samt styremedlem i en rekke selskaper.</p>
+                    <p>Tommy Dahlen has been working as a legal advisor for numerous start-ups and knowledge based entreprises for the last 18 years and has specialized his practice around protection and monetization of intellectual property rights. Dahlen is also employed as an Assistant Professor at NTNU School of Entrepreneurship and serves as the Director of the Intellectual Property Institute of Norway (IPiN), as well as holding a position on the Board of Directors of several technology based companies in Norway</p>
                     <p class="program-footer">
                       <a href="https://twitter.com/intent/follow?screen_name=tommydahlen"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |
                       <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2F09%2FTommy_Dahlen_bilde.png&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1630_sal5&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1630_sal5&name=Betydningen+av+IPR+i+programvareutvikling%3A+bruk%2C+gjenbruk+og+misbruk&caption=16%3A30+%23tdconf+2015&description=Du+f%C3%A5r+en+praktisk+oversikt+over+deler+av+IPR-systemet+av+s%C3%A6rlig+betydning+for+utviklere.+Gjennomgangen+vil+bli+illustrert+med+eksempler+og+etablering+av+noen+kj%C3%B8reregler+for+en+konfliktfri+hverdag.%22&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
@@ -1406,7 +1413,7 @@
         <section class="program-time ">
             <h4  class="program-time">17:15 - 18:05 Closing session</h4>
 
-            <div id="f1715_sal1" class="program-post">
+            <div id="f1715_sal1" class="program-post even">
                 <table class="program-header">
                     <tr>
                         <th class="favourite">
