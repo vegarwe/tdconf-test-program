@@ -16,6 +16,9 @@
                 padding: 4px;
                 margin-bottom: 20px;
             }
+            div.odd {
+                background-color: #444;
+            }
             h4.program-time {
                 padding: 14px 14px 14px 2px;
                 margin: 0;
@@ -28,12 +31,15 @@
             }
             th.favourite {
                 width: 28px;
+                color: #888;
             }
             th.favourite span {
                 font-size: 0.8em;
             }
             .program-title {
+                /*
                 color: #00ff80;
+                */
                 margin:  0 0 0 5px;
                 padding: 0 0 0 5px;
                 cursor: pointer;
@@ -50,6 +56,7 @@
                 padding: 0 0 0 5px;
                 cursor: pointer;
                 cursor: hand;
+                color: #888;
 
                 font-family: proxima-nova;
                 font-size: 16px;

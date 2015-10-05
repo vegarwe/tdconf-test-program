@@ -149,7 +149,7 @@ def program_page(programs):
 
 
                 write_raw( f, '\n')
-                write_line(f, '    <div id="f%s" class="program-post">' % id)
+                write_line(f, '    <div id="f%s" class="program-post %s">' % (id, 'odd' if room % 2 == 0 else 'even'))
                 write_line(f, '        <table class="program-header">')
                 write_line(f, '            <tr>')
                 write_line(f, '                <th class="favourite">')
