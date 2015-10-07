@@ -63,7 +63,6 @@ def speaker_page(programs):
 
         s['short_title'] = short_title
         s['link'] = '%s/#f%s' % (base_url, s['id'])
-        print s['image']
         if s['image'] != '':
             img = '.'.join(s['image'].split('/')[-1].split(".")[:-1])
             s['image'] = "http://static.trondheimdc.no/uploads/2015/cropped/" + img + "_cropped.jpg"
