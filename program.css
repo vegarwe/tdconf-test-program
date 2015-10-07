@@ -17,14 +17,21 @@
                 margin-bottom: 20px;
             }
             div.odd {
+                /*
                 background-color: #444;
+                */
             }
             h4.program-time {
-                padding: 14px 14px 14px 2px;
+                padding: 14px 14px 14px 10px;
                 margin: 0;
             }
             table.program-header {
                 width: 100%;
+                background-color: #444;
+                margin-top: 14px;
+                margin-bottom: 14px;
+                padding-top: 6px;
+                padding-bottom: 6px;
             }
             th, td {
                 vertical-align: top;
@@ -32,16 +39,17 @@
             th.favourite {
                 width: 28px;
                 color: #888;
+                padding-left: 8px;
             }
-            th.favourite span {
+            th.favourite div {
+                padding: 8px 0 0 0;
                 font-size: 0.8em;
             }
             .program-title {
                 /*
                 color: #00ff80;
                 */
-                margin:  0 0 0 5px;
-                padding: 0 0 0 5px;
+                padding: 8px 0 0 10px;
                 cursor: pointer;
                 cursor: hand;
 
@@ -70,12 +78,9 @@
                 margin-left: 16px;
             }
             img.program-img {
-                /*
-                height: 156px;
-                */
                 width:  156px;
                 float: left;
-                margin: 0 4px 4px 0;
+                margin: 0 12px 12px 0;
             }
             img.program-social {
                 height: 16px;

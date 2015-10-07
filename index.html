@@ -51,14 +51,21 @@
                 margin-bottom: 20px;
             }
             div.odd {
+                /*
                 background-color: #444;
+                */
             }
             h4.program-time {
-                padding: 14px 14px 14px 2px;
+                padding: 14px 14px 14px 10px;
                 margin: 0;
             }
             table.program-header {
                 width: 100%;
+                background-color: #444;
+                margin-top: 14px;
+                margin-bottom: 14px;
+                padding-top: 6px;
+                padding-bottom: 6px;
             }
             th, td {
                 vertical-align: top;
@@ -66,16 +73,17 @@
             th.favourite {
                 width: 28px;
                 color: #888;
+                padding-left: 8px;
             }
-            th.favourite span {
+            th.favourite div {
+                padding: 8px 0 0 0;
                 font-size: 0.8em;
             }
             .program-title {
                 /*
                 color: #00ff80;
                 */
-                margin:  0 0 0 5px;
-                padding: 0 0 0 5px;
+                padding: 8px 0 0 10px;
                 cursor: pointer;
                 cursor: hand;
 
@@ -104,12 +112,9 @@
                 margin-left: 16px;
             }
             img.program-img {
-                /*
-                height: 156px;
-                */
                 width:  156px;
                 float: left;
-                margin: 0 4px 4px 0;
+                margin: 0 12px 12px 0;
             }
             img.program-social {
                 height: 16px;
@@ -1127,11 +1132,11 @@
                 </table>
                 <div class="program-talk hidden">
                     <img class="program-img" src="http://static.trondheimdc.no/uploads/vfb/2015/06/Inge-Solvoll.jpg">
-                    <p>Ingen tilstand, ingen variabler, ingen løkker. Hvordan kan man få gjort noe ordentlig arbeid med slike begrensninger?</p><p></p><p>Vi viser hvordan funksjonelle teknikker får hele kategorier av problemer til å forsvinne, med kortere og mer lesbar kode som en hyggelig bonus.</p><p></p><p>Det blir demonstrert i Swift, Java og Clojure. Ingen forkunnskaper nødvendig, kun et åpent sinn!</p>
+                    <p>Ingen tilstand, ingen variabler, ingen løkker. Hvordan kan man få gjort noe ordentlig arbeid med slike begrensninger? Vi viser hvordan funksjonelle teknikker får hele kategorier av problemer til å forsvinne, med kortere og mer lesbar kode som en hyggelig bonus.</p><p></p><p>Det blir demonstrert i Swift, Java og Clojure. Ingen forkunnskaper nødvendig, kun et åpent sinn!</p>
                     <p>Inge Solvoll koder på JVM og web for Marine Cybernetics i Trondheim. Han liker å finne enkle løsninger på komplekse problemer.</p><p></p><p>Trond H. Bordewich jobber med Objective-C og Swift hos Lingit og er organisator for CocoaHeads Trondheim. Han liker aha-opplevelsene som programmering stadig bringer med seg.</p>
                     <p class="program-footer">
                       <a href="https://twitter.com/intent/follow?screen_name=ingesol"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2Fvfb%2F2015%2F06%2FInge-Solvoll.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal2&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal2&name=Tenk+mindre+-+tenk+funksjonelt&caption=15%3A45+%23tdconf+2015&description=Ingen+tilstand%2C+ingen+variabler%2C+ingen+l%C3%B8kker.+Hvordan+kan+man+f%C3%A5+gjort+noe+ordentlig+arbeid+med+slike+begrensninger%3F%0A%0AVi+viser+hvordan+funksjonelle+teknikker+f%C3%A5r+hele+kategorier+av+problemer+til+%C3%A5+forsvinne%2C+med+kortere+og+mer+lesbar+kode+som+en+hyggelig+bonus.%0A%0ADet+blir+demonstrert+i+Swift%2C+Java+og+Clojure.+Ingen+forkunnskaper+n%C3%B8dvendig%2C+kun+et+%C3%A5pent+sinn%21&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2Fvfb%2F2015%2F06%2FInge-Solvoll.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal2&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal2&name=Tenk+mindre+-+tenk+funksjonelt&caption=15%3A45+%23tdconf+2015&description=Ingen+tilstand%2C+ingen+variabler%2C+ingen+l%C3%B8kker.+Hvordan+kan+man+f%C3%A5+gjort+noe+ordentlig+arbeid+med+slike+begrensninger%3F+Vi+viser+hvordan+funksjonelle+teknikker+f%C3%A5r+hele+kategorier+av+problemer+til+%C3%A5+forsvinne%2C+med+kortere+og+mer+lesbar+kode+som+en+hyggelig+bonus.%0A%0ADet+blir+demonstrert+i+Swift%2C+Java+og+Clojure.+Ingen+forkunnskaper+n%C3%B8dvendig%2C+kun+et+%C3%A5pent+sinn%21&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
                       <a href="#f1545_sal2">Sal&nbsp;2 - 15:45</a>
                     </p>
                 </div>
@@ -1159,11 +1164,11 @@
                 </table>
                 <div class="program-talk hidden">
                     <img class="program-img" src="http://static.trondheimdc.no/uploads/2015/09/StijnDeGouw_cropped.jpg">
-                    <p>Tim Peters developed the Timsort hybrid sorting algorithm in 2002. TimSort is</p><p>today used as the default sorting algorithm for Android SDK, Sun’s JDK, OpenJDK,</p><p>Python, Apache, Hadoop and many other languages and frameworks.</p><p>Given the popularity of these platforms, the number of computers, cloud services</p><p>and mobile phones that use TimSort for sorting is well into the billions.</p><p></p><p>Fast forward to 2015. After we had successfully verified Counting and Radix sort</p><p>implementations in Java with a formal verification tool called KeY, we were</p><p>looking for a new challenge. TimSort seemed to be the ideal candidate for several</p><p>reasons: it is rather complex, widely used, had a bug history but was reported as</p><p>fixed in Java 8, and was extensively tested. Unfortunately, we weren’t able to</p><p>prove its correctness. A closer analysis showed that this was, quite simply,</p><p>because TimSort was broken and our theoretical considerations finally led us to a</p><p>path towards finding the bug. We show how we did it, derive a mechanically verified</p><p>bug-free version and discuss the reactions of the developer communities involved</p><p>in the implementation of the Java and Python standard libraries.</p>
+                    <p>Tim Peters developed the Timsort hybrid sorting algorithm in 2002. TimSort is today used as the default sorting algorithm for Android SDK, Sun’s JDK, OpenJDK, Python, Apache, Hadoop and many other languages and rameworks. Given the popularity of these platforms, the number of computers, cloud services and mobile phones that use TimSort for sorting is well into the billions.</p><p></p><p>Fast forward to 2015. After we had successfully verified Counting and Radix sort implementations in Java with a formal verification tool called KeY, we were looking for a new challenge. TimSort seemed to be the ideal candidate for several reasons: it is rather complex, widely used, had a bug history but was reported as fixed in Java 8, and was extensively tested. Unfortunately, we weren’t able to prove its correctness. A closer analysis showed that this was, quite simply, because TimSort was broken and our theoretical considerations finally led us to a path towards finding the bug. We show how we did it, derive a mechanically verified bug-free version and discuss the reactions of the developer communities involved in the implementation of the Java and Python standard libraries.</p>
                     <p>Stijn is a postdoc in a public (Centre for Mathematics and Computer Science)-private (SDL) partnership project focussing on run-time checking and monitoring cloud applications.  He obtained his PhD in 2013 at Leiden University and the Centre for Mathematics and Computer Science</p>
                     <p class="program-footer">
                       
-                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2F09%2FStijnDeGouw_cropped.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal3&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal3&name=Bug+in+TimSort&caption=15%3A45+%23tdconf+2015&description=Tim+Peters+developed+the+Timsort+hybrid+sorting+algorithm+in+2002.+TimSort+is%0Atoday+used+as+the+default+sorting+algorithm+for+Android+SDK%2C+Sun%E2%80%99s+JDK%2C+OpenJDK%2C%0APython%2C+Apache%2C+Hadoop+and+many+other+languages+and+frameworks.%0AGiven+the+popularity+of+these+platforms%2C+the+number+of+computers%2C+cloud+services%0Aand+mobile+phones+that+use+TimSort+for+sorting+is+well+into+the+billions.%0A%0AFast+forward+to+2015.+After+we+had+successfully+verified+Counting+and+Radix+sort%0Aimplementations+in+Java+with+a+formal+verification+tool+called+KeY%2C+we+were%0Alooking+for+a+new+challenge.+TimSort+seemed+to+be+the+ideal+candidate+for+several%0Areasons%3A+it+is+rather+complex%2C+widely+used%2C+had+a+bug+history+but+was+reported+as%0Afixed+in+Java+8%2C+and+was+extensively+tested.+Unfortunately%2C+we+weren%E2%80%99t+able+to%0Aprove+its+correctness.+A+closer+analysis+showed+that+this+was%2C+quite+simply%2C%0Abecause+TimSort+was+broken+and+our+theoretical+considerations+finally+led+us+to+a%0Apath+towards+finding+the+bug.+We+show+how+we+did+it%2C+derive+a+mechanically+verified%0Abug-free+version+and+discuss+the+reactions+of+the+developer+communities+involved%0Ain+the+implementation+of+the+Java+and+Python+standard+libraries.&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
+                      <a href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fstatic.trondheimdc.no%2Fuploads%2F2015%2F09%2FStijnDeGouw_cropped.jpg&redirect_uri=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal3&link=http%3A%2F%2F2015.trondheimdc.no%2Fprogram%2F%23f1545_sal3&name=Bug+in+TimSort&caption=15%3A45+%23tdconf+2015&description=Tim+Peters+developed+the+Timsort+hybrid+sorting+algorithm+in+2002.+TimSort+is+today+used+as+the+default+sorting+algorithm+for+Android+SDK%2C+Sun%E2%80%99s+JDK%2C+OpenJDK%2C+Python%2C+Apache%2C+Hadoop+and+many+other+languages+and+rameworks.+Given+the+popularity+of+these+platforms%2C+the+number+of+computers%2C+cloud+services+and+mobile+phones+that+use+TimSort+for+sorting+is+well+into+the+billions.%0A%0AFast+forward+to+2015.+After+we+had+successfully+verified+Counting+and+Radix+sort+implementations+in+Java+with+a+formal+verification+tool+called+KeY%2C+we+were+looking+for+a+new+challenge.+TimSort+seemed+to+be+the+ideal+candidate+for+several+reasons%3A+it+is+rather+complex%2C+widely+used%2C+had+a+bug+history+but+was+reported+as+fixed+in+Java+8%2C+and+was+extensively+tested.+Unfortunately%2C+we+weren%E2%80%99t+able+to+prove+its+correctness.+A+closer+analysis+showed+that+this+was%2C+quite+simply%2C+because+TimSort+was+broken+and+our+theoretical+considerations+finally+led+us+to+a+path+towards+finding+the+bug.+We+show+how+we+did+it%2C+derive+a+mechanically+verified+bug-free+version+and+discuss+the+reactions+of+the+developer+communities+involved+in+the+implementation+of+the+Java+and+Python+standard+libraries.&app_id=1170433749639697&display=page"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |
                       <a href="#f1545_sal3">Sal&nbsp;3 - 15:45</a>
                     </p>
                 </div>
