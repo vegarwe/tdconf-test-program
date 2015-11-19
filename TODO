@@ -1,11 +1,5 @@
 TODO:
-- Test multiple 'chapters' in input .csv (about and abstract), should get surrounded by <p>
 - 'caption' for Facebook links
-
-* (void) Print: Med sjerner
-* (void) Print: Ekspander alt
-* (void) Bigger box for Lunch break?
-* (void) Nedover kebab
 
 Done
 - (done) store cookie
@@ -19,3 +13,10 @@ Done
 - (done) Expand all
 - (done) Expand from url
 - (done) Switch to 2014.trondheimdc.no Facebook app
+- (done) Test multiple 'chapters' in input .csv (about and abstract), should get surrounded by <p>
+
+* (void) Print: Med sjerner
+* (void) Print: Ekspander alt
+* (void) Bigger box for Lunch break?
+* (void) Nedover kebab
+
