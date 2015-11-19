@@ -6,13 +6,14 @@ import csv
 import sys
 import json
 import urllib
+from pprint import pprint
 
 base_url = 'http://2015.trondheimdc.no/program'
 
 def speaker_page(programs):
     f = HtmlOutput('speakers')
 
-    f.write_line('        <!-- Copy from here...... -->')
+    f.write_line('<!-- Copy from here...... -->')
 
     f.write_file("speakers.css")
 
@@ -32,7 +33,8 @@ def speaker_page(programs):
             s['image'] = "http://static.trondheimdc.no/uploads/2015/cropped/" + img + "_cropped.jpg"
 
     f.write_line('<script type="text/javascript">')
-    f.write_line('  var speakers = %s' % json.dumps(speakers))
+    f.write_line('  var speakers =')
+    f.write_pprint(speakers)
     f.write_line('</script>')
 
     f.write_raw( '\n')
@@ -43,14 +45,14 @@ def speaker_page(programs):
 
     f.write_file("speakers.js")
 
-    f.write_line('        <!-- To here.............. -->')
+    f.write_line('<!-- To here.............. -->')
 
     f.close()
 
 def program_page(programs):
     f = HtmlOutput('program')
 
-    f.write_line('        <!-- Copy from here...... -->')
+    f.write_line('<!-- Copy from here...... -->')
 
     f.write_file("program.css")
 
@@ -143,7 +145,7 @@ def program_page(programs):
 
     f.write_file("program.js")
 
-    f.write_line('        <!-- To here.............. -->')
+    f.write_line('<!-- To here.............. -->')
     f.close()
 
 show_times = [
@@ -172,42 +174,24 @@ show_times = [
         ['1815', '18:15', '01:00', 'TDConf party',   ''],
     ]
 
-header = """
-<!doctype html>
-
+header = """<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Test program</title>
-
         <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
-
         <style>
-            /* Debugging
-            */
-            .hidden    { display: none; }
-
             html {
                 background-color: #01131C;
                 color: #eee;
             }
-            a {
-                color: #00ff80;
-            }
-
-            /*
-            .favourite { border: 1px solid green; }
-            .expand    { border: 1px solid red; }
-            .show      { border: 1px solid yellow; }
-            */
+            .hidden { display: none; }
+            a       { color: #00ff80; }
         </style>
-
     </head>
-
     <body>
 """
-footer = """
-    </body>
+footer = """    </body>
 </html>
 """
 
@@ -233,6 +217,10 @@ class HtmlOutput(object):
         with open(file) as i:
             for line in i.readlines():
                 self.write_raw(line)
+
+    def write_pprint(self, data):
+        pprint(data, self.simple)
+        pprint(data, self.square)
 
     def close(self):
         self.simple.write(footer)
