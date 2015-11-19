@@ -9,48 +9,12 @@ import urllib
 
 base_url = 'http://2015.trondheimdc.no/program'
 
-def read_input(input_file):
-    input = []
-    with open(input_file, 'rb') as csvfile:
-        reader = csv.reader(csvfile, delimiter=',', quotechar='"')
-        for row in reader:
-            if row[0] == 'Vurdering': continue
-            if row[2] == '': continue
-            input.append({
-                'id': row[2],
-                'title': row[9],
-                'author': row[6],
-                'twitter': row[19],
-                'image': row[13],
-                'abstract': row[10],
-                'about': row[11]
-            })
-    #print repr(input)
-
-    return input
-
-def write_raw(f, raw):
-    f.write(raw)
-
-def write_line(f, line):
-    indent = "        "
-    write_raw(f, '%s%s\n' % (indent, line))
-
-def write_file(f, file):
-    with open(file) as i:
-        for line in i.readlines():
-            write_raw(f, line)
-
 def speaker_page(programs):
-    f = open('speakers.html', 'w')
+    f = HtmlOutput('speakers')
 
-    if os.path.isfile('header.html.stub'):
-        write_file(f, 'header.html.stub')
-    else:
-        write_raw( f, header)
-    write_line(f, '        <!-- Copy from here...... -->')
+    f.write_line('        <!-- Copy from here...... -->')
 
-    write_file(f, "speakers.css")
+    f.write_file("speakers.css")
 
     speakers = programs[:]
     for s in speakers:
@@ -67,46 +31,40 @@ def speaker_page(programs):
             img = '.'.join(s['image'].split('/')[-1].split(".")[:-1])
             s['image'] = "http://static.trondheimdc.no/uploads/2015/cropped/" + img + "_cropped.jpg"
 
-    write_line(f, '<script type="text/javascript">')
-    write_line(f, '  var speakers = %s' % json.dumps(speakers))
-    write_line(f, '</script>')
+    f.write_line('<script type="text/javascript">')
+    f.write_line('  var speakers = %s' % json.dumps(speakers))
+    f.write_line('</script>')
 
-    write_raw( f, '\n')
-    write_line(f, '<h2>Speakers 2015</h2>')
-    write_raw( f, '\n')
+    f.write_raw( '\n')
+    f.write_line('<h2>Speakers 2015</h2>')
+    f.write_raw( '\n')
 
-    write_line(f, '<div id="speaker-list" class="speaker-list clearfix"></div>')
+    f.write_line('<div id="speaker-list" class="speaker-list clearfix"></div>')
 
-    write_file(f, "speakers.js")
+    f.write_file("speakers.js")
 
-    write_line(f, '        <!-- To here.............. -->')
-    if os.path.isfile('footer.html.stub'):
-        write_file(f, 'footer.html.stub')
-    else:
-        write_raw( f, footer)
+    f.write_line('        <!-- To here.............. -->')
+
+    f.close()
 
 def program_page(programs):
-    f = open('index.html', 'w')
+    f = HtmlOutput('program')
 
-    if os.path.isfile('header.html.stub'):
-        write_file(f, 'header.html.stub')
-    else:
-        write_raw( f, header)
-    write_line(f, '        <!-- Copy from here...... -->')
+    f.write_line('        <!-- Copy from here...... -->')
 
-    write_file(f, "program.css")
+    f.write_file("program.css")
 
-    write_raw( f, '\n')
-    write_line(f, '<h2>Program 2015</h2>')
-    write_raw( f, '\n')
-    write_line(f, '<table class="program-top"><tr>')
-    write_line(f, '<td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>')
-    write_line(f, '<td class="expand-all"><img src="http://static.trondheimdc.no/uploads/2015/s/ic_expand_more_white_24dp_2x.png"></td>')
-    write_line(f, '</tr></table>')
+    f.write_raw( '\n')
+    f.write_line('<h2>Program 2015</h2>')
+    f.write_raw( '\n')
+    f.write_line('<table class="program-top"><tr>')
+    f.write_line('<td class="program-notification">Merk: Denne siden bruker cookies for å huske dine favoritter. Trykk på stjernen(e) for å merke dine favoritter.</td>')
+    f.write_line('<td class="expand-all"><img src="http://static.trondheimdc.no/uploads/2015/s/ic_expand_more_white_24dp_2x.png"></td>')
+    f.write_line('</tr></table>')
 
     for show_time in show_times:
-        write_line(f, '<section class="program-time %s">' % show_time[4])
-        write_line(f, '    <h4  class="program-time">%s - %s %s</h4>' % (show_time[1], show_time[2], show_time[3]))
+        f.write_line('<section class="program-time %s">' % show_time[4])
+        f.write_line('    <h4  class="program-time">%s - %s %s</h4>' % (show_time[1], show_time[2], show_time[3]))
 
         for room in xrange(1,6):
             for program in programs:
@@ -147,49 +105,46 @@ def program_page(programs):
                     twitter_tag = '<a href="https://twitter.com/intent/follow?screen_name=%s"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/twitter_grey.png">follow</a>  |' % program['twitter']
 
 
-                write_raw( f, '\n')
-                write_line(f, '    <div id="f%s" class="program-post %s">' % (id, 'odd' if room % 2 == 0 else 'even'))
-                write_line(f, '        <table class="program-header">')
-                write_line(f, '            <tr>')
-                write_line(f, '                <th class="favourite">')
-                write_line(f, '                    <div>Sal&nbsp;%s</div>' % room)
-                write_line(f, '                    <img class="fav-icon" src="http://static.trondheimdc.no/uploads/2015/s/ic_star_border_white_24dp_1x.png">')
-                write_line(f, '                </th>')
-                write_line(f, '                <td class="expand">')
-                write_line(f, '                    <div class="program-title">')
-                write_line(f, '                        %s' % (program['title']))
-                write_line(f, '                    </div>')
-                write_line(f, '                    <div class="post-author">')
-                write_line(f, '                        %s' % (program['author']))
-                write_line(f, '                    </div>')
-                write_line(f, '                </td>')
-                write_line(f, '                <td class="expand expand-icon">')
-                write_line(f, '                    <img class="expand-icon" src="http://static.trondheimdc.no/uploads/2015/s/ic_expand_more_white_24dp_1x.png">')
-                write_line(f, '                </td>')
-                write_line(f, '            </tr>')
-                write_line(f, '        </table>')
-                write_line(f, '        <div class="program-talk hidden">')
-                write_line(f, '            %s' % image_tag)
-                write_line(f, '            %s' % abstract_tag)
-                write_line(f, '            %s' % about_tag)
-                write_line(f, '            <p class="program-footer">')
-                write_line(f, '              %s' % twitter_tag)
-                write_line(f, '              <a href="%s"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |' % (face_url))
-                write_line(f, '              <a href="%s">Sal&nbsp;%s - %s</a>' % (post_url, room, show_time[1]))
-                write_line(f, '            </p>')
-                write_line(f, '        </div>')
-                write_line(f, '    </div>')
+                f.write_raw( '\n')
+                f.write_line('    <div id="f%s" class="program-post %s">' % (id, 'odd' if room % 2 == 0 else 'even'))
+                f.write_line('        <table class="program-header">')
+                f.write_line('            <tr>')
+                f.write_line('                <th class="favourite">')
+                f.write_line('                    <div>Sal&nbsp;%s</div>' % room)
+                f.write_line('                    <img class="fav-icon" src="http://static.trondheimdc.no/uploads/2015/s/ic_star_border_white_24dp_1x.png">')
+                f.write_line('                </th>')
+                f.write_line('                <td class="expand">')
+                f.write_line('                    <div class="program-title">')
+                f.write_line('                        %s' % (program['title']))
+                f.write_line('                    </div>')
+                f.write_line('                    <div class="post-author">')
+                f.write_line('                        %s' % (program['author']))
+                f.write_line('                    </div>')
+                f.write_line('                </td>')
+                f.write_line('                <td class="expand expand-icon">')
+                f.write_line('                    <img class="expand-icon" src="http://static.trondheimdc.no/uploads/2015/s/ic_expand_more_white_24dp_1x.png">')
+                f.write_line('                </td>')
+                f.write_line('            </tr>')
+                f.write_line('        </table>')
+                f.write_line('        <div class="program-talk hidden">')
+                f.write_line('            %s' % image_tag)
+                f.write_line('            %s' % abstract_tag)
+                f.write_line('            %s' % about_tag)
+                f.write_line('            <p class="program-footer">')
+                f.write_line('              %s' % twitter_tag)
+                f.write_line('              <a href="%s"><img class="program-social" src="http://static.trondheimdc.no/uploads/2015/s/facebook.png">share</a> |' % (face_url))
+                f.write_line('              <a href="%s">Sal&nbsp;%s - %s</a>' % (post_url, room, show_time[1]))
+                f.write_line('            </p>')
+                f.write_line('        </div>')
+                f.write_line('    </div>')
 
-        write_line(f, '</section>')
-        write_raw( f, '\n\n')
+        f.write_line('</section>')
+        f.write_raw( '\n\n')
 
-    write_file(f, "program.js")
+    f.write_file("program.js")
 
-    write_line(f, '        <!-- To here.............. -->')
-    if os.path.isfile('footer.html.stub'):
-        write_file(f, 'footer.html.stub')
-    else:
-        write_raw( f, footer)
+    f.write_line('        <!-- To here.............. -->')
+    f.close()
 
 show_times = [
         ['0800', '08:00', '09:00', 'Registrering',  'sep'],
@@ -255,6 +210,58 @@ footer = """
     </body>
 </html>
 """
+
+class HtmlOutput(object):
+    def __init__(self, prefix):
+        self.simple = open(prefix + '_simple.html', 'w')
+        self.square = open(prefix + '_square.html', 'w')
+
+        self.simple.write(header)
+        with open('header.html.stub') as i:
+            for line in i.readlines():
+                self.square.write(line)
+
+    def write_raw(self, raw):
+        self.simple.write(raw)
+        self.square.write(raw)
+
+    def write_line(self, line):
+        indent = "        "
+        self.write_raw('%s%s\n' % (indent, line))
+
+    def write_file(self, file):
+        with open(file) as i:
+            for line in i.readlines():
+                self.write_raw(line)
+
+    def close(self):
+        self.simple.write(footer)
+        self.simple.close()
+
+        with open('header.html.stub') as i:
+            for line in i.readlines():
+                self.square.write(line)
+        self.square.close()
+
+def read_input(input_file):
+    input = []
+    with open(input_file, 'rb') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+        for row in reader:
+            if row[0] == 'Vurdering': continue
+            if row[2] == '': continue
+            input.append({
+                'id': row[2],
+                'title': row[9],
+                'author': row[6],
+                'twitter': row[19],
+                'image': row[13],
+                'abstract': row[10],
+                'about': row[11]
+            })
+    #print repr(input)
+
+    return input
 
 if __name__ == "__main__":
     input = read_input('kjoreplan_2015.csv')
