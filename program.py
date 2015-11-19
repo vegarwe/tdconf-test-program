@@ -260,6 +260,3 @@ if __name__ == "__main__":
     input = read_input('kjoreplan_2015.csv')
     program_page(input)
     speaker_page(input)
-    #import kjoreplan_sample
-    #program_page(kjoreplan_sample.programs)
-    #speaker_page(kjoreplan_sample.programs)
